@@ -53,10 +53,16 @@ contract ERC721MerkleDrop is ERC721, Ownable {
      */
     function mint(bytes32[] memory proof, address to) external {
         require(!claimed[to], "claimed");
-        require(
-            MerkleProof.verify(proof, root, keccak256(abi.encodePacked(to))),
-            "!proof"
-        );
+        if (root != bytes32(0)) {
+            require(
+                MerkleProof.verify(
+                    proof,
+                    root,
+                    keccak256(abi.encodePacked(to))
+                ),
+                "!proof"
+            );
+        }
 
         claimed[to] = true;
 
