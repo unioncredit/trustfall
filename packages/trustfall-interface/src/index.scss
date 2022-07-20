@@ -1,0 +1,55 @@
+@import "@unioncredit/ui/lib";
+
+body {
+  background: #1e1e1e;
+}
+
+ul {
+  list-style: initial;
+  padding-left: 20px;
+
+  li {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.logo {
+  width: 126px;
+  margin: 0 auto;
+}
+
+.button {
+  min-height: 40px;
+
+  &--primary {
+    background: #4f46e5 !important;
+
+    &:hover {
+      background: #6366f1 !important;
+    }
+
+    &:active {
+      background: #4338ca !important;
+    }
+  }
+
+  &--secondary {
+    background: none;
+    color: white;
+    border: 0px !important;
+
+    &:hover:not(.button--selected) {
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    &:active:not(.button--selected) {
+      background: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    &.button--selected {
+      background: white;
+      color: black;
+    }
+  }
+}

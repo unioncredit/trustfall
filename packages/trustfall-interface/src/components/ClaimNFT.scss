@@ -1,0 +1,53 @@
+.ClaimNFT {
+  background: #262626;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+
+  &__header {
+    svg path {
+      fill: white;
+    }
+  }
+
+  &__imageContainer {
+    width: 185px;
+    margin-right: 24px;
+  }
+
+  &__image {
+    position: relative;
+    background: red;
+    width: 100%;
+    border: solid 1px #525252;
+    background: #404040;
+    border-radius: 4px;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 110%;
+    }
+  }
+
+  &__tickItems {
+    font-size: 12px;
+
+    .box {
+      color: #525252;
+      svg path {
+        fill: #525252;
+      }
+    }
+  }
+
+  .text,
+  .label {
+    color: white;
+  }
+
+  li {
+    color: #a3a3a3;
+  }
+}
