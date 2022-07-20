@@ -1,0 +1,11 @@
+{
+  "name": "trustfall",
+  "version": "1.0.0",
+  "description": "Trustfall monorepo by Union",
+  "private": true,
+  "workspaces": [
+    "./packages"
+  ],
+  "author": "@unioncredit",
+  "license": "ISC"
+}
