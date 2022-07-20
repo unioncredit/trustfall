@@ -18,6 +18,8 @@ contract ERC721MerkleDrop is ERC721, Ownable {
 
     bytes32 public root;
 
+    mapping(address => bool) public claimed;
+
     /* ---------------------------------------------
    Events 
   ----------------------------------------------- */
@@ -50,10 +52,13 @@ contract ERC721MerkleDrop is ERC721, Ownable {
      * @dev Only one token per address is allowed to be minted
      */
     function mint(bytes32[] memory proof, address to) external {
+        require(!claimed[to], "claimed");
         require(
             MerkleProof.verify(proof, root, keccak256(abi.encodePacked(to))),
             "!proof"
         );
+
+        claimed[to] = true;
 
         _mint(to, ++id);
     }
