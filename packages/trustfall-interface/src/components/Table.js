@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { useEthers } from "@usedapp/core";
-import { Table as UITable, TableRow, TableCell } from "@unioncredit/ui";
+import {
+  Table as UITable,
+  TableRow,
+  TableCell,
+  LoadingSpinner,
+  Box,
+} from "@unioncredit/ui";
 
 import fetchTableData from "fetchers/fetchTableData";
 import Avatar from "components/Avatar";
@@ -21,7 +27,15 @@ export default function Table() {
     chainId && fetchData();
   }, [chainId]);
 
-  if (!data) return null;
+  if (!data) {
+    return (
+      <UITable>
+        <Box py="24px" fluid align="center" justify="center">
+          <LoadingSpinner size={24} />
+        </Box>
+      </UITable>
+    );
+  }
 
   return (
     <UITable>
