@@ -1,7 +1,8 @@
-import { Grid, Layout, Box } from "@unioncredit/ui";
+import { Grid, Layout, Box, Label } from "@unioncredit/ui";
 
 import Navigation from "components/Navigation";
 import ClaimNFT from "components/ClaimNFT";
+import Table from "components/Table";
 
 function App() {
   return (
@@ -20,6 +21,28 @@ function App() {
               <Grid.Col>
                 <Navigation />
                 <ClaimNFT />
+              </Grid.Col>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Col>
+                <Box fluid mt="16px">
+                  <Table />
+                </Box>
+              </Grid.Col>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Col>
+                <Box
+                  fluid
+                  mt="24px"
+                  mb="48px"
+                  direction="vertical"
+                  align="center"
+                >
+                  <Label as="p" size="small" color="grey500">
+                    Built with &hearts; by Union
+                  </Label>
+                </Box>
               </Grid.Col>
             </Grid.Row>
           </Grid>

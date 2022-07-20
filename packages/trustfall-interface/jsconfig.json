@@ -3,7 +3,8 @@
     "baseUrl": "./src",
     "paths": {
       "components/*": ["./components/*"],
-      "abis/*": ["./abis/*"]
+      "abis/*": ["./abis/*"],
+      "fetchers/*": ["./fetchers/*"]
     }
   }
 }
