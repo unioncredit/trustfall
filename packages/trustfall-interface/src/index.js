@@ -17,7 +17,7 @@ const config = {
   multicallAddresses: {
     [Kovan.chainId]: "0x2cc8688c5f75e365aaeeb4ea8d6a480405a48d2a",
   },
-  networks: [Kovan.chainId],
+  networks: [Kovan],
 };
 
 setGridConfiguration({

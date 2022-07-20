@@ -13,7 +13,10 @@ export default function ClaimNFT() {
   const { account, activateBrowserWallet } = useEthers();
 
   const { send: mint } = useNFT("mint");
-  const { value } = useNFTCall("balanceOf", account ? [account] : null);
+  const { value: balances } = useNFTCall(
+    "balanceOf",
+    account ? [account] : null
+  );
 
   const handleRedeem = async () => {
     try {
@@ -71,7 +74,9 @@ export default function ClaimNFT() {
         </Box>
         <Box mt="12px">
           {account ? (
-            value[0].gt(0) ? (
+            !balances?.[0] ? (
+              <Button label="Loading wallet status" disabled={true} />
+            ) : balances[0].gt(0) ? (
               <Button
                 label="Congratulations wallet already claimed"
                 disabled={true}
