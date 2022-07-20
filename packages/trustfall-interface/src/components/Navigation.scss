@@ -12,16 +12,20 @@
   @media screen and (max-width: 410px) {
     flex-direction: column !important;
 
-    &__items .button {
+    &__items {
       width: 100% !important;
-      margin-right: 2px;
-      margin-left: 2px;
+      .button {
+        width: 100% !important;
+        margin-right: 2px;
+        margin-left: 2px;
+      }
     }
 
     &__action {
       width: 100% !important;
       margin: 0 !important;
 
+      & .button,
       & .Navigation__accountButton {
         width: 100% !important;
         margin-top: 8px;
