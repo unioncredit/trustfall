@@ -1,12 +1,28 @@
+import { useState } from "react";
 import { useEthers } from "@usedapp/core";
 import { Box, Text, Label, Button, Divider } from "@unioncredit/ui";
 import { ReactComponent as Info } from "@unioncredit/ui/lib/icons/wireInfo.svg";
 import { ReactComponent as Tick } from "@unioncredit/ui/lib/icons/wireCheck.svg";
 
+import useNFT from "hooks/useNFT";
+
 import "./ClaimNFT.scss";
 
 export default function ClaimNFT() {
-  const { account } = useEthers();
+  const [loading, setLoading] = useState(false);
+  const { send: mint } = useNFT("mint");
+  const { account, activateBrowserWallet } = useEthers();
+
+  const handleRedeem = async () => {
+    try {
+      setLoading(true);
+      await mint([], account);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Box className="ClaimNFT" fluid>
@@ -18,13 +34,18 @@ export default function ClaimNFT() {
           <Text mb="8px">The Trustfall Ticket NFT</Text>
           <Box align="center">
             <Info width="24px" />
-            <Label m={0} as="p">
+            <Label m={0} as="p" size="small">
               5000 DAI Vouch Pool
             </Label>
           </Box>
         </Box>
         <Divider my={0} />
-        <Label as="p" mt="11px" mb="4px">
+        <Label
+          as="p"
+          mt="11px"
+          mb="4px"
+          className="ClaimNFT__highlightedHeader"
+        >
           Who can redeem a Trustfall ticket?
         </Label>
         <ul>
@@ -47,9 +68,18 @@ export default function ClaimNFT() {
           </Box>
         </Box>
         {account ? (
-          <Button mt="12px" label="Redeem Ticket" />
+          <Button
+            mt="12px"
+            label="Redeem Ticket"
+            onClick={handleRedeem}
+            loading={loading}
+          />
         ) : (
-          <Button mt="12px" label="Connet Wallet to Redeem" />
+          <Button
+            mt="12px"
+            label="Connet Wallet to Redeem"
+            onClick={() => activateBrowserWallet()}
+          />
         )}
       </Box>
     </Box>
