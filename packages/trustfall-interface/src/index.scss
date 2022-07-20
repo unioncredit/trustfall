@@ -56,4 +56,13 @@ ul {
   .loading-spinner circle {
     stroke: rgba(255, 255, 255, 0.3) !important;
   }
+
+  &[disabled="true"],
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled="true"]:hover {
+    background: #404040 !important;
+    color: white !important;
+    opacity: 0.4 !important;
+  }
 }

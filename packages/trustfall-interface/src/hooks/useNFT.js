@@ -14,5 +14,5 @@ export default function useNFT(...args) {
 }
 
 export function useNFTCall(method, args) {
-  return useCall({ contract, method, args }) ?? {};
+  return useCall(method && args && contract && { contract, method, args });
 }
