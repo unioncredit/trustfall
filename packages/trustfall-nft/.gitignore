@@ -1,0 +1,9 @@
+artifacts/
+cache/
+hh-cache/
+out/
+.DS_*
+node_modules/
+.openzeppelin
+typechain-types/
+coverage/

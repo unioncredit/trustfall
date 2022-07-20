@@ -1,0 +1,7 @@
+{
+    "kovan": {
+        "deployer": "0x23bbc53e1904b589d685e811c5d3410146f0ab02",
+        "address": "0x1fb711bb1d34acf9dc81d85cf70f940ce43ec49c",
+        "hash": "0x48845cd43552e317a69979a17ced01c98aee6183f01c870b6db8680fa981685a"
+    }
+}

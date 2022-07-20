@@ -1,0 +1,15 @@
+{
+    "name": "trustfall-nft",
+    "version": "1.0.0",
+    "description": "Trustfall NFT contracts",
+    "author": "@unioncredit",
+    "license": "ISC",
+    "scripts": {
+        "format": "prettier --write \"./**/*.sol\"",
+        "format:check": "prettier --check \"./**/*.sol\""
+    },
+    "dependencies": {
+        "prettier": "^2.7.1",
+        "prettier-plugin-solidity": "^1.0.0-dev.23"
+    }
+}
