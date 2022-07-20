@@ -17,3 +17,29 @@
     background: #404040;
   }
 }
+
+.tableWrapper {
+  border: 1px solid #404040;
+  border-radius: 8px;
+  width: 100%;
+
+  @media screen and (max-width: 620px) {
+    overflow-x: scroll;
+  }
+
+  .table {
+    background: none;
+  }
+
+  .table-row:nth-child(1) .table-cell {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .table-cell {
+    border-bottom: 1px solid #404040;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

@@ -8,7 +8,7 @@ export default function Navigation() {
 
   return (
     <Box fluid mb="18px" className="Navigation">
-      <Box>
+      <Box className="Navigation__items">
         <Button
           mr="4px"
           className="button--selected"
@@ -17,7 +17,7 @@ export default function Navigation() {
         />
         <Button mr="4px" label="Game Rules" variant="secondary" />
       </Box>
-      <Box ml="auto">
+      <Box ml="auto" className="Navigation__action">
         {account ? (
           <div className="Navigation__accountButton">
             {account.slice(0, 6)}...{account.slice(-4)}

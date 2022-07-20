@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { setGridConfiguration } from "@unioncredit/ui";
 import { DAppProvider, Kovan } from "@usedapp/core";
-import { getDefaultProvider } from "ethers";
 
 import App from "./App";
 
@@ -21,7 +20,8 @@ const config = {
 };
 
 setGridConfiguration({
-  containerWidths: [540, 624, 624, 624, 624, 624],
+  breakpoints: [410, 611, 992, 1200, 1600, 1920],
+  containerWidths: [410, 624, 624, 624, 624, 624],
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
