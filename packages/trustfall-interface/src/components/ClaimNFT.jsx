@@ -9,7 +9,9 @@ import useNFT from "hooks/useNFT";
 import "./ClaimNFT.scss";
 import useAccountInfo from "hooks/useAccountInfo";
 
-export default function ClaimNFT({ accountBalance }) {
+const mintCost = "10000000000000000"; // 0.01 ETH
+
+export default function ClaimNFT({ accountBalance, refreshData }) {
   const [loading, setLoading] = useState(false);
   const { account, activateBrowserWallet } = useEthers();
   const info = useAccountInfo();
@@ -19,11 +21,12 @@ export default function ClaimNFT({ accountBalance }) {
   const handleRedeem = async () => {
     try {
       setLoading(true);
-      await mint([], account);
+      await mint([], account, info.checkIsMember ? {} : { value: mintCost });
     } catch (e) {
       console.log(e);
     } finally {
       setLoading(false);
+      typeof refreshData === "function" && refreshData();
     }
   };
 

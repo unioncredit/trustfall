@@ -11,6 +11,7 @@ import fetchTableData from "fetchers/fetchTableData";
 import useTokenHolders from "hooks/useTokenHolders";
 
 function Leaderboard() {
+  const [refreshCounter, setRefreshCounter] = useState(0);
   const [allData, setData] = useState(null);
   const { chainId, account } = useEthers();
   const holders = useTokenHolders();
@@ -31,7 +32,7 @@ function Leaderboard() {
     }
 
     chainId && !data && fetchData();
-  }, [chainId]);
+  }, [chainId, refreshCounter]);
 
   const data = useMemo(() => {
     if (!allData || !holders) return null;
@@ -48,7 +49,13 @@ function Leaderboard() {
           {balances?.[0].gt(0) ? (
             <MyStats data={data} />
           ) : (
-            <ClaimNFT accountBalance={balances?.[0]} />
+            <ClaimNFT
+              refreshData={() => {
+                setData(null);
+                setRefreshCounter((x) => x + 1);
+              }}
+              accountBalance={balances?.[0]}
+            />
           )}
           <Box mt="16px" fluid>
             <RoundInfo />
