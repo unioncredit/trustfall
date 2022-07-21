@@ -11,7 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      {error && <AlertBanner label={error.message} />}
+      {error && error.message.includes("Unsupported") && (
+        <AlertBanner label={error.message} />
+      )}
       <Layout>
         <Layout.Main>
           <Grid xs>
