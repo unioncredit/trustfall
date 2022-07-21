@@ -1,18 +1,42 @@
 import { Box, Text, Button, Label, Heading } from "@unioncredit/ui";
+import { useEthers } from "@usedapp/core";
+import { useMemo } from "react";
+import format from "utils/format";
 
 import "./MyStats.scss";
 
-export default function MyStats() {
+export default function MyStats({ data }) {
+  const { account } = useEthers();
+
+  const accountData = useMemo(() => {
+    if (!data) return { index: -1 };
+
+    const index = data.findIndex(
+      (row) => row.member.toLowerCase() === account.toLowerCase()
+    );
+
+    return { index, ...data[index] };
+  }, [account]);
+
   const stats = [
-    { value: "#1", label: "of 133" },
+    { value: `#${accountData.index + 1}`, label: `of ${data?.length}` },
     { value: "1,234.12", label: "Your score" },
-    { value: "12", label: "Vouches acq." },
-    { value: "15,000", label: "Total Vouch (DAI)" },
+    { value: accountData.trustCount || "0", label: "Vouches acq." },
+    {
+      value: format(accountData.trustAmount || "0"),
+      label: "Total Vouch (DAI)",
+    },
     // Second row
     { value: "0", label: "Vouchees Defaulted" },
-    { value: "2", label: "Vouches Provided" },
-    { value: "3,000", label: "Your stake (DAI)" },
-    { value: "12", label: "Vouch Given (DAI)" },
+    { value: accountData.trustForCount || "0", label: "Vouches Provided" },
+    {
+      value: format(accountData.stakeAmount || "0"),
+      label: "Your stake (DAI)",
+    },
+    {
+      value: format(accountData.trustForAmount || "0"),
+      label: "Vouch Given (DAI)",
+    },
   ];
 
   return (
