@@ -28,7 +28,9 @@ export default function ClaimNFT({ accountBalance }) {
   return (
     <Box className="ClaimNFT" fluid>
       <Box className="ClaimNFT__imageContainer">
-        <div className="ClaimNFT__image" />
+        <div className="ClaimNFT__image">
+          <img src="/nft.png" />
+        </div>
       </Box>
       <Box direction="vertical" fluid>
         <Box justify="space-between" fluid className="ClaimNFT__header">
