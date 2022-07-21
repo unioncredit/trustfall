@@ -1,6 +1,7 @@
 {
     "kovan": {
+        "deployedTo": "0xe0a738f9e7d889d6eb258b27b22232f6c1192fc3",
         "deployer": "0x23bbc53e1904b589d685e811c5d3410146f0ab02",
-        "address": "0x3b47b7987656a6b9ca58e70937986d0b2041dcfe"
+        "transactionHash": "0xa2d08e6bb832e822b72d2a145ef56fa6cf88bc5990e76d8a97b841a9a9ce2b9e"
     }
 }

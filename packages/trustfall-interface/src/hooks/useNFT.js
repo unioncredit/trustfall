@@ -5,7 +5,7 @@ import { useCall, useContractFunction } from "@usedapp/core";
 import ABI from "abis/nft.json";
 
 export const itf = new utils.Interface(ABI);
-export const nftAddress = "0x3b47b7987656a6b9ca58e70937986d0b2041dcfe";
+export const nftAddress = "0xe0a738f9e7d889d6eb258b27b22232f6c1192fc3";
 
 export const contract = new Contract(nftAddress, itf);
 
