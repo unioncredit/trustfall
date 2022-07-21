@@ -49,9 +49,17 @@
     font-size: 12px;
 
     .box {
+      line-height: 1px;
       color: #525252;
       svg path {
         fill: #525252;
+      }
+
+      &.active {
+        color: white;
+        svg path {
+          fill: #818cf8 !important;
+        }
       }
     }
   }

@@ -7,10 +7,12 @@ import { ReactComponent as Tick } from "@unioncredit/ui/lib/icons/wireCheck.svg"
 import useNFT from "hooks/useNFT";
 
 import "./ClaimNFT.scss";
+import useAccountInfo from "hooks/useAccountInfo";
 
 export default function ClaimNFT({ accountBalance }) {
   const [loading, setLoading] = useState(false);
   const { account, activateBrowserWallet } = useEthers();
+  const info = useAccountInfo();
 
   const { send: mint } = useNFT("mint");
 
@@ -52,22 +54,18 @@ export default function ClaimNFT({ accountBalance }) {
           Who can redeem a Trustfall ticket?
         </Label>
         <ul>
-          <li>Addresses with ENS primary record set</li>
-          <li>ETHcc Hackathon participants via QR code in swag bag</li>
-          <li>Proof of Humanity registered</li>
+          <li>Union Protocol Members</li>
+          <li>Anyone (for Ξ 0.01)</li>
+          <li>Members of the Myrmidons</li>
         </ul>
         <Box mt="10px" className="ClaimNFT__tickItems">
-          <Box align="center" mr="8px">
+          <Box
+            align="center"
+            mr="8px"
+            className={info.checkIsMember ? "active" : ""}
+          >
             <Tick width="24px" />
             Union Member
-          </Box>
-          <Box align="center" mr="8px">
-            <Tick width="24px" />
-            ENS Set
-          </Box>
-          <Box align="center" mr="8px">
-            <Tick width="24px" />
-            Proof of Humanity
           </Box>
         </Box>
         <Box mt="12px">
@@ -80,11 +78,26 @@ export default function ClaimNFT({ accountBalance }) {
                 disabled={true}
               />
             ) : (
-              <Button
-                label="Redeem Ticket"
-                onClick={handleRedeem}
-                loading={loading}
-              />
+              <Box align="center">
+                <Button
+                  label="Mint Ticket"
+                  onClick={handleRedeem}
+                  loading={loading}
+                />
+                <Label
+                  as="p"
+                  ml="16px"
+                  mb={0}
+                  className={info.checkIsMember ? "crossout" : ""}
+                >
+                  Ξ 0.01 Mint Fee
+                </Label>
+                {info.checkIsMember && (
+                  <Label as="p" ml="16px" mb={0} color="green500">
+                    😊 Free
+                  </Label>
+                )}
+              </Box>
             )
           ) : (
             <Button

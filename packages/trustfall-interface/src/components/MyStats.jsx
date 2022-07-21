@@ -1,4 +1,5 @@
 import { Box, Text, Button, Label, Heading } from "@unioncredit/ui";
+import { ReactComponent as External } from "@unioncredit/ui/lib/icons/externalinline.svg";
 import { useEthers } from "@usedapp/core";
 import { formatUnits } from "ethers/lib/utils";
 import useAccountInfo from "hooks/useAccountInfo";
@@ -61,7 +62,15 @@ export default function MyStats({ data }) {
         <Text m={0} color="white">
           Your Stats & Position
         </Text>
-        <Button variant="secondary" label="Go To Union App" />
+        <Button
+          className="goToUnionButton"
+          variant="secondary"
+          label={
+            <>
+              Go To Union App <External />
+            </>
+          }
+        />
       </Box>
       <div className="MyStats__grid">
         {stats.map((stat) => (

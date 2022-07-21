@@ -5,6 +5,10 @@
   padding: 16px;
   box-sizing: border-box;
 
+  .goToUnionButton svg path {
+    fill: white;
+  }
+
   &__header {
     padding-bottom: 12px;
     border-bottom: 1px solid #404040;

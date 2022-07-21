@@ -16,25 +16,32 @@ const userManager = new Contract(ZERO_ADDRESS, userManagerIft);
 export default function useAccountInfo() {
   const { account, chainId } = useEthers();
 
+  const attachedUserManager = userManager.attach(userManagerAddress[chainId]);
+
   const calls = [
     {
-      contract: userManager.attach(userManagerAddress[chainId]),
+      contract: attachedUserManager,
       method: "getTotalLockedStake",
       args: [account],
     },
     {
-      contract: userManager.attach(userManagerAddress[chainId]),
+      contract: attachedUserManager,
       method: "getBorrowerAddresses",
       args: [account],
     },
     {
-      contract: userManager.attach(userManagerAddress[chainId]),
+      contract: attachedUserManager,
       method: "getStakerBalance",
       args: [account],
     },
     {
-      contract: userManager.attach(userManagerAddress[chainId]),
+      contract: attachedUserManager,
       method: "getTotalFrozenAmount",
+      args: [account],
+    },
+    {
+      contract: attachedUserManager,
+      method: "checkIsMember",
       args: [account],
     },
   ];
