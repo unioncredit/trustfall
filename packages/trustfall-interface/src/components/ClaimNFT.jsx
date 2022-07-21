@@ -4,19 +4,15 @@ import { Box, Text, Label, Button, Divider } from "@unioncredit/ui";
 import { ReactComponent as Info } from "@unioncredit/ui/lib/icons/wireInfo.svg";
 import { ReactComponent as Tick } from "@unioncredit/ui/lib/icons/wireCheck.svg";
 
-import useNFT, { useNFTCall } from "hooks/useNFT";
+import useNFT from "hooks/useNFT";
 
 import "./ClaimNFT.scss";
 
-export default function ClaimNFT() {
+export default function ClaimNFT({ accountBalance }) {
   const [loading, setLoading] = useState(false);
   const { account, activateBrowserWallet } = useEthers();
 
   const { send: mint } = useNFT("mint");
-  const { value: balances } = useNFTCall(
-    "balanceOf",
-    account ? [account] : null
-  );
 
   const handleRedeem = async () => {
     try {
@@ -74,9 +70,9 @@ export default function ClaimNFT() {
         </Box>
         <Box mt="12px">
           {account ? (
-            !balances?.[0] ? (
+            !accountBalance ? (
               <Button label="Loading wallet status" disabled={true} />
-            ) : balances[0].gt(0) ? (
+            ) : accountBalance.gt(0) ? (
               <Button
                 label="Congratulations wallet already claimed"
                 disabled={true}
