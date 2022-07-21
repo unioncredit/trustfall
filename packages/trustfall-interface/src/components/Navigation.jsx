@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEthers } from "@usedapp/core";
 import { Box, Button } from "@unioncredit/ui";
 
 import "./Navigation.scss";
 
 export default function Navigation() {
+  const location = useLocation();
   const { activateBrowserWallet, account } = useEthers();
 
   return (
@@ -14,7 +15,7 @@ export default function Navigation() {
           mr="4px"
           as={Link}
           to="/"
-          className="button--selected"
+          className={location.pathname === "/" ? "button--selected" : ""}
           label="Leaderboard"
           variant="secondary"
         />
@@ -22,6 +23,9 @@ export default function Navigation() {
           mr="4px"
           as={Link}
           to="/rules"
+          className={
+            location.pathname.includes("rules") ? "button--selected" : ""
+          }
           label="Game Rules"
           variant="secondary"
         />

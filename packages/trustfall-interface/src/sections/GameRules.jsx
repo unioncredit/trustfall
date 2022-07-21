@@ -1,3 +1,5 @@
+import Rules from "components/Rules";
+
 export default function GameRules() {
-  return <>Game Rules</>;
+  return <Rules />;
 }
