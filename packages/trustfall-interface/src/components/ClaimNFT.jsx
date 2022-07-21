@@ -40,7 +40,7 @@ export default function ClaimNFT() {
           <Box align="center">
             <Info width="24px" />
             <Label m={0} as="p" size="small">
-              5000 DAI Vouch Pool
+              10,000 DAI Vouch Pool
             </Label>
           </Box>
         </Box>
