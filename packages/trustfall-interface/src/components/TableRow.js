@@ -1,7 +1,10 @@
+import { useEthers } from "@usedapp/core";
 import { commify } from "ethers/lib/utils";
 import { TableRow as UITableRow, TableCell, Badge } from "@unioncredit/ui";
 import { ReactComponent as External } from "@unioncredit/ui/lib/icons/external.svg";
+
 import useENS from "hooks/useENS";
+import getEtherscanLink from "utils/getEtherscanLink";
 
 import Avatar from "components/Avatar";
 
@@ -15,6 +18,7 @@ export default function TableRow({
   index: i,
 }) {
   const ens = useENS(member);
+  const { chainId } = useEthers();
 
   return (
     <UITableRow>
@@ -50,7 +54,9 @@ export default function TableRow({
       <TableCell>
         {member.slice(0, 6)}...{member.slice(-4)}
         {ens.name && <Badge color="grey" label={ens.name} ml="8px" />}
-        <External className="external" width="24px" />
+        <a href={getEtherscanLink(chainId, member, "ADDRESS")} target="_blank">
+          <External className="external" width="24px" />
+        </a>
       </TableCell>
       <TableCell align="right">{trustCount}</TableCell>
       <TableCell align="right">{commify(trustAmount)}</TableCell>

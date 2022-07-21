@@ -1,12 +1,17 @@
-import { Grid, Layout, Box, Label } from "@unioncredit/ui";
+import { useEthers } from "@usedapp/core";
+import { Routes, Route } from "react-router-dom";
+import { Grid, Layout, Box, Label, AlertBanner } from "@unioncredit/ui";
 
 import Navigation from "components/Navigation";
-import ClaimNFT from "components/ClaimNFT";
-import Table from "components/Table";
+import Leaderboard from "sections/Leaderboard";
+import GameRules from "sections/GameRules";
 
 function App() {
+  const { error } = useEthers();
+
   return (
     <div className="App">
+      {error && <AlertBanner label={error.message} />}
       <Layout>
         <Layout.Main>
           <Grid xs>
@@ -20,16 +25,14 @@ function App() {
             <Grid.Row>
               <Grid.Col>
                 <Navigation />
-                <ClaimNFT />
               </Grid.Col>
             </Grid.Row>
-            <Grid.Row>
-              <Grid.Col>
-                <Box fluid mt="16px">
-                  <Table />
-                </Box>
-              </Grid.Col>
-            </Grid.Row>
+
+            <Routes>
+              <Route path="/" element={<Leaderboard />} />
+              <Route path="/rules" element={<GameRules />} />
+            </Routes>
+
             <Grid.Row>
               <Grid.Col>
                 <Box

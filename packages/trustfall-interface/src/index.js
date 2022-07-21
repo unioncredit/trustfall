@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { setGridConfiguration } from "@unioncredit/ui";
 import { DAppProvider, Kovan } from "@usedapp/core";
+import { setGridConfiguration } from "@unioncredit/ui";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
 
@@ -27,6 +28,8 @@ setGridConfiguration({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <DAppProvider config={config}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </DAppProvider>
 );

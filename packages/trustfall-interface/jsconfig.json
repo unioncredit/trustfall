@@ -4,7 +4,9 @@
     "paths": {
       "components/*": ["./components/*"],
       "abis/*": ["./abis/*"],
-      "fetchers/*": ["./fetchers/*"]
+      "fetchers/*": ["./fetchers/*"],
+      "utils/*": ["./utils/*"],
+      "sections/*": ["./sections/*"]
     }
   }
 }
