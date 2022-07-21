@@ -1,5 +1,5 @@
 import { useEthers } from "@usedapp/core";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Grid, Box } from "@unioncredit/ui";
 
 import ClaimNFT from "components/ClaimNFT";
@@ -8,10 +8,12 @@ import RoundInfo from "components/RoundInfo";
 import { useNFTCall } from "hooks/useNFT";
 import MyStats from "components/MyStats";
 import fetchTableData from "fetchers/fetchTableData";
+import useTokenHolders from "hooks/useTokenHolders";
 
 function Leaderboard() {
-  const [data, setData] = useState(null);
+  const [allData, setData] = useState(null);
   const { chainId, account } = useEthers();
+  const holders = useTokenHolders();
   const { value: balances } = useNFTCall(
     "balanceOf",
     account ? [account] : null
@@ -31,11 +33,19 @@ function Leaderboard() {
     chainId && !data && fetchData();
   }, [chainId]);
 
+  const data = useMemo(() => {
+    if (!allData || !holders) return null;
+    const lowerCaseHolders = holders.map((s) => s.toLowerCase());
+    return allData.filter((row) => {
+      return lowerCaseHolders.includes(row.member.toLowerCase());
+    });
+  }, [allData, holders]);
+
   return (
     <>
       <Grid.Row>
         <Grid.Col>
-          {balances?.[0] ? (
+          {balances?.[0].gt(0) ? (
             <MyStats data={data} />
           ) : (
             <ClaimNFT accountBalance={balances?.[0]} />

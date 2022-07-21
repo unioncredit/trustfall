@@ -16,7 +16,7 @@ export default function MyStats({ data }) {
     );
 
     return { index, ...data[index] };
-  }, [account]);
+  }, [account, data]);
 
   const stats = [
     { value: `#${accountData.index + 1}`, label: `of ${data?.length}` },
