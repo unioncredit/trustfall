@@ -42,4 +42,18 @@
     font-size: 14px;
     line-height: 20px;
   }
+
+  .external {
+    vertical-align: middle;
+    margin-left: 4px;
+
+    & > path:nth-child(1) {
+      fill: #1e1e1e;
+    }
+  }
+
+  .badge.badge--grey {
+    background: #404040;
+    color: #e5e5e5;
+  }
 }

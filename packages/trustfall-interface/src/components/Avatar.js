@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { Avatar as UIAvatar } from "@unioncredit/ui";
 import makeBlockie from "ethereum-blockies-base64";
-import useENS from "hooks/useENS";
 
-export default function Avatar({ address, size }) {
+export default function Avatar({ address, size, ens }) {
   const [error, setError] = useState(false);
-  const ens = useENS(address);
-
   const blockie = makeBlockie(address);
 
   return (
