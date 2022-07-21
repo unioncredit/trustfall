@@ -31,6 +31,9 @@
     width: 100%;
     grid-gap: 12px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media screen and (max-width: 611px) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     &__item {
       background: #171717;

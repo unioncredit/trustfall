@@ -2,14 +2,35 @@
   background: #262626;
   border: 1px solid #404040;
   border-radius: 8px;
-  padding: 8px;
+  padding: 8px 16px;
   box-sizing: border-box;
 
-  span {
+  .highlight {
+    color: #818cf8;
+  }
+
+  .blackBox {
     background: black;
     padding: 8px 12px;
     border-radius: 4px;
     margin-left: 8px;
     display: inline-block;
+    text-align: center;
+  }
+
+  .label {
+    font-size: 12px;
+
+    &--small {
+      font-size: 10px;
+      color: #a3a3a3;
+    }
+  }
+
+  @media screen and (max-width: 624px) {
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+    }
   }
 }

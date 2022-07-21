@@ -46,6 +46,9 @@ function Leaderboard() {
     <>
       <Grid.Row>
         <Grid.Col>
+          <Box mb="16px" fluid>
+            <RoundInfo />
+          </Box>
           {balances?.[0].gt(0) ? (
             <MyStats data={data} />
           ) : (
@@ -57,9 +60,6 @@ function Leaderboard() {
               accountBalance={balances?.[0]}
             />
           )}
-          <Box mt="16px" fluid>
-            <RoundInfo />
-          </Box>
         </Grid.Col>
       </Grid.Row>
       <Grid.Row>
