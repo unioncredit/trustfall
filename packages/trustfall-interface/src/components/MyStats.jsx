@@ -1,5 +1,7 @@
 import { Box, Text, Button, Label, Heading } from "@unioncredit/ui";
 import { useEthers } from "@usedapp/core";
+import { formatUnits } from "ethers/lib/utils";
+import useAccountInfo from "hooks/useAccountInfo";
 import { useMemo } from "react";
 import format from "utils/format";
 
@@ -7,6 +9,7 @@ import "./MyStats.scss";
 
 export default function MyStats({ data }) {
   const { account } = useEthers();
+  const results = useAccountInfo();
 
   const accountData = useMemo(() => {
     if (!data) return { index: -1 };
@@ -19,6 +22,7 @@ export default function MyStats({ data }) {
   }, [account, data]);
 
   const stats = [
+    // First row
     { value: `#${accountData.index + 1}`, label: `of ${data?.length}` },
     { value: "1,234.12", label: "Your score" },
     { value: accountData.trustCount || "0", label: "Vouches acq." },
@@ -27,15 +31,21 @@ export default function MyStats({ data }) {
       label: "Total Vouch (DAI)",
     },
     // Second row
-    { value: "0", label: "Vouchees Defaulted" },
-    { value: accountData.trustForCount || "0", label: "Vouches Provided" },
     {
-      value: format(accountData.stakeAmount || "0"),
-      label: "Your stake (DAI)",
+      value: format(results.getBorrowerAddresses?.length || "0"),
+      label: "Vouches Given",
     },
     {
-      value: format(accountData.trustForAmount || "0"),
-      label: "Vouch Given (DAI)",
+      value: format(formatUnits(results.getStakerBalance || "0"), 2),
+      label: "Stake (DAI)",
+    },
+    {
+      value: format(formatUnits(results.getTotalLockedStake || "0"), 2),
+      label: "Locked stake (DAI)",
+    },
+    {
+      value: format(formatUnits(results.getTotalFrozenAmount || "0"), 2),
+      label: "Defaulted (DAI)",
     },
   ];
 
