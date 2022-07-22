@@ -65,6 +65,9 @@ export default function MyStats({ data }) {
         <Button
           className="goToUnionButton"
           variant="secondary"
+          as="a"
+          href="https://arbitrum.union.finance"
+          target="_blank"
           label={
             <>
               Go To Union App <External />
