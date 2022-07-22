@@ -1,5 +1,5 @@
 import { useEthers } from "@usedapp/core";
-import { commify } from "ethers/lib/utils";
+import { commify, formatUnits } from "ethers/lib/utils";
 import { TableRow as UITableRow, TableCell, Badge } from "@unioncredit/ui";
 import { ReactComponent as External } from "@unioncredit/ui/lib/icons/external.svg";
 
@@ -11,20 +11,20 @@ import Avatar from "components/Avatar";
 import "./Table.scss";
 
 export default function TableRow({
-  member,
+  address,
   isMember,
-  trustCount,
-  trustAmount,
+  vouches,
+  vouchesSum,
   index: i,
 }) {
-  const ens = useENS(member);
+  const ens = useENS(address);
   const { chainId } = useEthers();
 
   return (
     <UITableRow>
       <TableCell fixedSize>{i + 1}</TableCell>
       <TableCell fixedSize className="avatarCell">
-        <Avatar address={member} size={24} ens={ens} />
+        <Avatar address={address} size={24} ens={ens} />
         <span className="isMember">
           {isMember ? (
             <svg
@@ -52,14 +52,14 @@ export default function TableRow({
         </span>
       </TableCell>
       <TableCell>
-        {member.slice(0, 6)}...{member.slice(-4)}
+        {address.slice(0, 6)}...{address.slice(-4)}
         {ens.name && <Badge color="grey" label={ens.name} ml="8px" />}
-        <a href={getEtherscanLink(chainId, member, "ADDRESS")} target="_blank">
+        <a href={getEtherscanLink(chainId, address, "ADDRESS")} target="_blank">
           <External className="external" width="24px" />
         </a>
       </TableCell>
-      <TableCell align="right">{trustCount}</TableCell>
-      <TableCell align="right">{commify(trustAmount)}</TableCell>
+      <TableCell align="right">{vouches.length}</TableCell>
+      <TableCell align="right">{commify(formatUnits(vouchesSum))}</TableCell>
       <TableCell align="right">356.00</TableCell>
     </UITableRow>
   );

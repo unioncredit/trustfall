@@ -16,7 +16,7 @@ export default function MyStats({ data }) {
     if (!data) return { index: -1 };
 
     const index = data.findIndex(
-      (row) => row.member.toLowerCase() === account.toLowerCase()
+      (row) => row.address.toLowerCase() === account.toLowerCase()
     );
 
     return { index, ...data[index] };

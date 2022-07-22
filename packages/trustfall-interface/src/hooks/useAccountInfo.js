@@ -6,12 +6,12 @@ import UserManagerABI from "abis/userManager.json";
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-const userManagerAddress = {
+export const userManagerAddress = {
   [Kovan.chainId]: "0x391fDb669462FBAA5a7e228f3857281BeCf235EE",
 };
 
 const userManagerIft = new utils.Interface(UserManagerABI);
-const userManager = new Contract(ZERO_ADDRESS, userManagerIft);
+export const userManager = new Contract(ZERO_ADDRESS, userManagerIft);
 
 export default function useAccountInfo() {
   const { account, chainId } = useEthers();
