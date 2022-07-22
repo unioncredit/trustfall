@@ -4,7 +4,6 @@ export function getPairTotals(rows) {
   let tot = {};
 
   for (const row of rows) {
-    debugger;
     for (const [s1, v1] of row.vouches) {
       if (!tot[s1]) tot[s1] = {};
 

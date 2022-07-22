@@ -1,6 +1,6 @@
 import { useEthers } from "@usedapp/core";
 import { BigNumber } from "ethers";
-import { contract } from "hooks/useNFT";
+import { contract, nftAddress } from "hooks/useNFT";
 import { useEffect, useState } from "react";
 import { userManager, userManagerAddress } from "./useAccountInfo";
 
@@ -11,7 +11,7 @@ export default function useTokenHolders() {
 
   useEffect(() => {
     async function fetchData() {
-      const nft = contract.connect(library);
+      const nft = contract.attach(nftAddress[chainId]).connect(library);
       const id = await nft.id();
 
       const resp = await Promise.all(
