@@ -7,11 +7,9 @@ interface IUserManager {
     function checkIsMember(address) external view returns (bool);
 }
 
-/**
- * @title Trustfall
- * @author @unioncredit
- * @dev External validation logic to check if a sender is valid
- */
+/// @title Trustfall
+/// @author @unioncredit
+/// @dev External validation logic to check if a sender is valid
 contract Trustfall is Ownable {
     /* ---------------------------------------------
      Storage
@@ -20,12 +18,6 @@ contract Trustfall is Ownable {
     address public userManager;
 
     uint256 public mintCost;
-
-    /* ---------------------------------------------
-     Events 
-    ----------------------------------------------- */
-
-    event MintCostUpdate(address sender, uint256 mintCost);
 
     /* ---------------------------------------------
      Constructor 
@@ -42,7 +34,6 @@ contract Trustfall is Ownable {
 
     function setMintCost(uint256 _mintCost) external onlyOwner {
         mintCost = _mintCost;
-        emit MintCostUpdate(msg.sender, _mintCost);
     }
 
     function isValid(address sender, uint256 value)
