@@ -5,15 +5,16 @@ import { ReactComponent as Info } from "@unioncredit/ui/lib/icons/wireInfo.svg";
 import { ReactComponent as Tick } from "@unioncredit/ui/lib/icons/wireCheck.svg";
 
 import useNFT from "hooks/useNFT";
+import useAccountInfo from "hooks/useAccountInfo";
+import ConnectButton from "components/ConnectButton";
 
 import "./ClaimNFT.scss";
-import useAccountInfo from "hooks/useAccountInfo";
 
 const mintCost = "10000000000000000"; // 0.01 ETH
 
 export default function ClaimNFT({ accountBalance, refreshData }) {
   const [loading, setLoading] = useState(false);
-  const { account, activateBrowserWallet } = useEthers();
+  const { account } = useEthers();
   const info = useAccountInfo();
 
   const { send: mint } = useNFT("mint");
@@ -103,10 +104,7 @@ export default function ClaimNFT({ accountBalance, refreshData }) {
               </Box>
             )
           ) : (
-            <Button
-              label="Connet Wallet to Redeem"
-              onClick={() => activateBrowserWallet()}
-            />
+            <ConnectButton label="Connet Wallet to Redeem" />
           )}
         </Box>
       </Box>

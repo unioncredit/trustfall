@@ -2,11 +2,13 @@ import { Link, useLocation } from "react-router-dom";
 import { useEthers } from "@usedapp/core";
 import { Box, Button } from "@unioncredit/ui";
 
+import ConnectButton from "components/ConnectButton";
+
 import "./Navigation.scss";
 
 export default function Navigation() {
   const location = useLocation();
-  const { activateBrowserWallet, account } = useEthers();
+  const { account } = useEthers();
 
   return (
     <Box fluid mb="18px" className="Navigation">
@@ -36,7 +38,7 @@ export default function Navigation() {
             {account.slice(0, 6)}...{account.slice(-4)}
           </div>
         ) : (
-          <Button label="Connect" onClick={() => activateBrowserWallet()} />
+          <ConnectButton label="Connect" />
         )}
       </Box>
     </Box>
