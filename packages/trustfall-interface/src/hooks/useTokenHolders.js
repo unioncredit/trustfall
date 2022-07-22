@@ -34,8 +34,14 @@ export default function useTokenHolders() {
               (acc, vouch) => acc.add(vouch),
               BigNumber.from(0)
             );
-            // foreach staker get the vouch amount
-            return { address, stakers, vouches, vouchesSum, isMember };
+
+            return {
+              address,
+              stakers,
+              vouches: vouches.map((v, i) => [stakers[i], v]),
+              vouchesSum,
+              isMember,
+            };
           })
       );
 

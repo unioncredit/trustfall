@@ -5,20 +5,26 @@ import { ReactComponent as External } from "@unioncredit/ui/lib/icons/external.s
 
 import useENS from "hooks/useENS";
 import getEtherscanLink from "utils/getEtherscanLink";
+import getScore from "utils/score";
 
 import Avatar from "components/Avatar";
 
 import "./Table.scss";
+import format from "utils/format";
 
 export default function TableRow({
   address,
   isMember,
+  stakers,
   vouches,
   vouchesSum,
+  pairTotals,
   index: i,
 }) {
   const ens = useENS(address);
   const { chainId } = useEthers();
+
+  const score = pairTotals ? getScore(vouches, pairTotals) : 0;
 
   return (
     <UITableRow>
@@ -60,7 +66,7 @@ export default function TableRow({
       </TableCell>
       <TableCell align="right">{vouches.length}</TableCell>
       <TableCell align="right">{commify(formatUnits(vouchesSum))}</TableCell>
-      <TableCell align="right">356.00</TableCell>
+      <TableCell align="right">{format(score, 2)}</TableCell>
     </UITableRow>
   );
 }

@@ -6,6 +6,7 @@ import {
   Box,
 } from "@unioncredit/ui";
 import TableRow from "./TableRow";
+import { getPairTotals } from "utils/score";
 
 import "./Table.scss";
 
@@ -22,6 +23,8 @@ export default function Table({ data }) {
     );
   }
 
+  const pairTotals = getPairTotals(data);
+
   return (
     <div className="tableWrapper">
       <UITable>
@@ -34,7 +37,12 @@ export default function Table({ data }) {
           <TableCell align="right">Total Score</TableCell>
         </UITableRow>
         {data.slice(0, 10).map((row, i) => (
-          <TableRow key={row.member} {...row} index={i} />
+          <TableRow
+            {...row}
+            index={i}
+            key={row.member}
+            pairTotals={pairTotals}
+          />
         ))}
       </UITable>
     </div>
