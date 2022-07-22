@@ -28,7 +28,7 @@ export default function MyStats({ data }) {
     { value: format(accountData.score || "0", 2), label: "Your score" },
     { value: accountData.vouches?.length || "0", label: "Vouches acq." },
     {
-      value: format(formatUnits(accountData.vouchesSum) || "0", 2),
+      value: format(formatUnits(accountData.vouchesSum || "0") || "0", 2),
       label: "Total Vouch (DAI)",
     },
     // Second row
