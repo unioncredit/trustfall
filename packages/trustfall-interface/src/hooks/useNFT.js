@@ -21,7 +21,11 @@ const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 export const contract = new Contract(ZERO_ADDRESS, itf);
 
 export default function useNFT(...args) {
-  return useContractFunction(contract, ...args);
+  const { chainId } = useEthers();
+  return useContractFunction(
+    chainId && nftAddress[chainId] && contract.attach(nftAddress[chainId]),
+    ...args
+  );
 }
 
 export function useNFTCall(method, args) {
