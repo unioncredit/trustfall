@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEthers } from "@usedapp/core";
 import { Box, Button } from "@unioncredit/ui";
+import { ReactComponent as External } from "@unioncredit/ui/lib/icons/externalinline.svg";
 
 import ConnectButton from "components/ConnectButton";
 
@@ -29,6 +30,17 @@ export default function Navigation() {
             location.pathname.includes("rules") ? "button--selected" : ""
           }
           label="Game Rules"
+          variant="secondary"
+        />
+        <Button
+          mr="4px"
+          as="a"
+          target="_blank"
+          href="https://discord.com/invite/DWF29rjRJH"
+          className="discordButton"
+          label="Discord"
+          iconPosition="end"
+          icon={External}
           variant="secondary"
         />
       </Box>

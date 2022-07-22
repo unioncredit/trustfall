@@ -32,4 +32,14 @@
       }
     }
   }
+
+  .discordButton.discordButton {
+    padding-right: 16px;
+    svg {
+      margin: 0;
+      path {
+        fill: white;
+      }
+    }
+  }
 }
