@@ -1,8 +1,19 @@
 import { Label, Box } from "@unioncredit/ui";
+import relativeTime from "utils/relativeTime";
 
 import "./RoundInfo.scss";
 
+const rounds = [
+  {
+    start: new Date(2022, 6, 22),
+    end: new Date(2022, 7, 5),
+  },
+];
+
 export default function RoundInfo() {
+  const msUntil = rounds[0].end.getTime() - rounds[0].start.getTime();
+  const secondsUntil = msUntil / 1000;
+
   return (
     <Box fluid>
       <Box className="RoundInfo" justify="space-between" align="center" fluid>
@@ -15,7 +26,7 @@ export default function RoundInfo() {
           </Label>
         </Box>
         <Label m={0} color="white" className="blackBox">
-          0d 0h 0m
+          {relativeTime(secondsUntil)}
         </Label>
       </Box>
 
