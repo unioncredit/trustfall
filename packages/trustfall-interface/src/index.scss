@@ -79,3 +79,15 @@ ul {
     stroke: rgba(255, 255, 255, 0.5);
   }
 }
+
+.modal.card {
+  border-color: #404040;
+  background: #1e1e1e;
+  h1.text {
+    color: white !important;
+  }
+
+  .modalHeaderWrapper {
+    border-color: #404040;
+  }
+}
