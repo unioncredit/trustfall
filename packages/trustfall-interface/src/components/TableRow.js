@@ -15,16 +15,13 @@ import format from "utils/format";
 export default function TableRow({
   address,
   isMember,
-  stakers,
   vouches,
   vouchesSum,
-  pairTotals,
+  score,
   index: i,
 }) {
   const ens = useENS(address);
   const { chainId } = useEthers();
-
-  const score = pairTotals ? getScore(vouches, pairTotals) : 0;
 
   return (
     <UITableRow>

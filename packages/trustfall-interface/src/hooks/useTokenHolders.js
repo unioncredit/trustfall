@@ -2,6 +2,7 @@ import { useEthers } from "@usedapp/core";
 import { BigNumber } from "ethers";
 import { contract, nftAddress } from "hooks/useNFT";
 import { useEffect, useState } from "react";
+import getScore, { getPairTotals } from "utils/score";
 import { userManager, userManagerAddress } from "./useAccountInfo";
 
 export default function useTokenHolders() {
@@ -45,7 +46,14 @@ export default function useTokenHolders() {
           })
       );
 
-      setData(resp);
+      const pairTotals = getPairTotals(resp);
+
+      setData(
+        resp.map((row) => ({
+          ...row,
+          score: getScore(row.vouches, pairTotals),
+        }))
+      );
     }
 
     fetchData();

@@ -25,10 +25,10 @@ export default function MyStats({ data }) {
   const stats = [
     // First row
     { value: `#${accountData.index + 1}`, label: `of ${data?.length}` },
-    { value: "1,234.12", label: "Your score" },
-    { value: accountData.trustCount || "0", label: "Vouches acq." },
+    { value: format(accountData.score || "0", 2), label: "Your score" },
+    { value: accountData.vouches?.length || "0", label: "Vouches acq." },
     {
-      value: format(accountData.trustAmount || "0"),
+      value: format(formatUnits(accountData.vouchesSum) || "0", 2),
       label: "Total Vouch (DAI)",
     },
     // Second row
