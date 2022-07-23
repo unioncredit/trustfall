@@ -5,13 +5,14 @@ import "./RoundInfo.scss";
 
 const rounds = [
   {
-    start: new Date(2022, 6, 22),
-    end: new Date(2022, 7, 5),
+    start: new Date(2022, 6, 24, 14, 20),
+    end: new Date(2022, 7, 7, 14, 20),
   },
 ];
 
 export default function RoundInfo() {
-  const msUntil = rounds[0].end.getTime() - rounds[0].start.getTime();
+  const now = new Date();
+  const msUntil = rounds[0].end.getTime() - now.getTime();
   const secondsUntil = msUntil / 1000;
 
   return (
