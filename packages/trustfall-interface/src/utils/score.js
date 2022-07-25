@@ -28,9 +28,9 @@ export default function getScore(vouches, pairTotals, threshold = 25) {
       const nv1 = Number(formatUnits(v1));
       const nv2 = Number(formatUnits(v2));
 
-      const pairTotalDiv = pairTotals[s1][s2] || 1;
+      const pairTotalDiv = pairTotals[s1][s2];
 
-      tot += (nv1 * nv2) ** 0.5 / pairTotalDiv / (threshold + 1);
+      tot += ((nv1 * nv2) ** 0.5) / (pairTotalDiv / (threshold + 1));
     }
   }
 
