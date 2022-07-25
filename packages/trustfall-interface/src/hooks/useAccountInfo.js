@@ -3,6 +3,7 @@ import { Contract } from "@ethersproject/contracts";
 import { Arbitrum, Kovan, useCalls, useEthers } from "@usedapp/core";
 
 import UserManagerABI from "abis/userManager.json";
+import useChainId from "./useChainId";
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
@@ -15,7 +16,8 @@ const userManagerIft = new utils.Interface(UserManagerABI);
 export const userManager = new Contract(ZERO_ADDRESS, userManagerIft);
 
 export default function useAccountInfo() {
-  const { account, chainId } = useEthers();
+  const { account } = useEthers();
+  const chainId = useChainId();
 
   const attachedUserManager =
     userManagerAddress[chainId] &&

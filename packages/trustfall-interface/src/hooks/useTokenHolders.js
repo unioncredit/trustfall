@@ -4,10 +4,12 @@ import { contract, nftAddress } from "hooks/useNFT";
 import { useEffect, useState } from "react";
 import getScore, { getPairTotals } from "utils/score";
 import { userManager, userManagerAddress } from "./useAccountInfo";
+import useChainId from "./useChainId";
 
 export default function useTokenHolders() {
   const [refreshCounter, setRefreshCounter] = useState(0);
-  const { chainId, library } = useEthers();
+  const { library } = useEthers();
+  const chainId = useChainId();
   const [data, setData] = useState();
 
   useEffect(() => {

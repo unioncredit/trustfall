@@ -8,7 +8,7 @@ import App from "./App";
 
 import "./index.scss";
 
-const config = {
+export const config = {
   readOnlyChainId: Arbitrum.chainId,
   readOnlyUrls: {
     [Arbitrum.chainId]:
