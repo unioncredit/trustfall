@@ -36,9 +36,9 @@ export default function Navigation() {
           mr="4px"
           as="a"
           target="_blank"
-          href="https://discord.com/invite/DWF29rjRJH"
+          href="https://guild.xyz/trustfall-battle-royale"
           className="discordButton"
-          label="Discord"
+          label="Secret Telegram"
           iconPosition="end"
           icon={External}
           variant="secondary"
