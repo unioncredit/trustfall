@@ -7,14 +7,12 @@ import { ReactComponent as Tick } from "@unioncredit/ui/lib/icons/wireCheck.svg"
 import useNFT from "hooks/useNFT";
 import useAccountInfo from "hooks/useAccountInfo";
 import ConnectButton from "components/ConnectButton";
-import Share from "components/Share";
 
 import "./ClaimNFT.scss";
 
 const mintCost = "10000000000000000"; // 0.01 ETH
 
-export default function ClaimNFT({ accountBalance, refreshData }) {
-  const [showShare, setShowShare] = useState(false);
+export default function ClaimNFT({ setShowShare, accountBalance, refreshData }) {
   const [loading, setLoading] = useState(false);
   const { account } = useEthers();
   const info = useAccountInfo();
@@ -40,7 +38,6 @@ export default function ClaimNFT({ accountBalance, refreshData }) {
 
   return (
     <Box className="ClaimNFT" fluid>
-      {showShare && <Share onClose={() => setShowShare(false)} />}
       <Box className="ClaimNFT__imageContainer">
         <div className="ClaimNFT__image">
           <img src="/nft.png" />
