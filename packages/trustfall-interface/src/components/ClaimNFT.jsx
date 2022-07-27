@@ -24,7 +24,12 @@ export default function ClaimNFT({ accountBalance, refreshData }) {
   const handleRedeem = async () => {
     try {
       setLoading(true);
-      await mint([], account, info.checkIsMember ? {} : { value: mintCost });
+      const resp = await mint(
+        [],
+        account,
+        info.checkIsMember ? {} : { value: mintCost }
+      );
+      if (resp) setShowShare(true);
     } catch (e) {
       console.log(e);
     } finally {
