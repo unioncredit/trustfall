@@ -13,6 +13,8 @@ export const config = {
   readOnlyUrls: {
     [Arbitrum.chainId]:
       "https://arbitrum-mainnet.infura.io/v3/b3359a5636d64b858b26fc5cccab8578",
+    [Kovan.chainId]:
+      "https://kovan.infura.io/v3/b3359a5636d64b858b26fc5cccab8578",
   },
   multicallAddresses: {
     [Kovan.chainId]: "0x2cc8688c5f75e365aaeeb4ea8d6a480405a48d2a",

@@ -73,7 +73,7 @@ export default function useTokenHolders() {
     }
 
     fetchData();
-  }, [refreshCounter]);
+  }, [refreshCounter, chainId]);
 
   return { data, refresh: () => setRefreshCounter((x) => x + 1) };
 }

@@ -30,7 +30,6 @@ export default function ClaimNFT({ accountBalance, refreshData }) {
     } finally {
       setLoading(false);
       typeof refreshData === "function" && refreshData();
-      setShowShare(true);
     }
   };
 
