@@ -12,7 +12,7 @@ import ABI from "abis/nft.json";
 
 export const itf = new utils.Interface(ABI);
 export const nftAddress = {
-  [Kovan.chainId]: "0xe0a738f9e7d889d6eb258b27b22232f6c1192fc3",
+  [Kovan.chainId]: "0x6ab0c9c0c8f1a0c34c90e18d381b1d61910fa742",
   [Arbitrum.chainId]: "0x8ce86b36add6b60229ba2f1bdeac220244c8ad24",
 };
 
