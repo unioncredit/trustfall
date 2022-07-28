@@ -1,5 +1,5 @@
 # Trustfall
 
-### By Union
+### By trustfall.eth
 
 Trustfall mono repo.
