@@ -1,3 +1,6 @@
 [submodule "packages/trustfall-nft/lib/openzeppelin-contracts"]
 	path = packages/trustfall-nft/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "packages/trustfall-nft/lib/forge-std"]
+	path = packages/trustfall-nft/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
