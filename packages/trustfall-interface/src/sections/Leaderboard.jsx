@@ -11,7 +11,7 @@ import useTokenHolders from "hooks/useTokenHolders";
 import Share from "components/Share";
 
 function Leaderboard() {
-  const [showShare, setShowShare] = useState(false);
+  const [showShare, setShowShare] = useState(true);
   const { account } = useEthers();
   const { data: holders, refresh } = useTokenHolders();
   const { value: balances } = useNFTCall(

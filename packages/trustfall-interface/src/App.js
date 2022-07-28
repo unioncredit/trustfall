@@ -45,7 +45,10 @@ function App() {
                   align="center"
                 >
                   <Label as="p" size="small" color="grey500">
-                    Built with &hearts; by Union
+                    Built with &hearts; by trustfall.eth on{" "}
+                    <a href="https://union.finance/" target="_blank">
+                      Union Protocol
+                    </a>
                   </Label>
                 </Box>
               </Grid.Col>

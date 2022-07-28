@@ -12,7 +12,7 @@ export default function Rules() {
         <ul>
           <li>If you’re on the list it’ll be free</li>
           <li>
-            If you’re not on the list it’ll be 0.001 ETH to add a bit of
+            If you’re not on the list it’ll be 0.01 ETH to add a bit of
             friction for Sybil
           </li>
         </ul>
