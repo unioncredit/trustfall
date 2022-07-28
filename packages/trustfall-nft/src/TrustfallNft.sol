@@ -42,9 +42,15 @@ contract TrustfallNFT is ERC721, Ownable {
     constructor(
         string memory name,
         string memory symbol,
-        address _trustfall
+        address _trustfall,
+        address[] memory _premine
     ) ERC721(name, symbol) {
         trustfall = _trustfall;
+
+        uint256 premineLen = _premine.length;
+        for (uint256 i = 0; i < premineLen; i++) {
+            _mint(_premine[i], ++id);
+        }
     }
 
     /* ---------------------------------------------
@@ -114,4 +120,14 @@ contract TrustfallNFT is ERC721, Ownable {
 
         return tokenURIString;
     }
+
+    /// @dev Drain ETH
+    /// @dev Allow the owner to pull the ETH out of this contract
+    function drain(address payable to, uint256 amount) public onlyOwner {
+        to.transfer(amount);
+    }
+
+    receive() external payable {}
+
+    fallback() external payable {}
 }
