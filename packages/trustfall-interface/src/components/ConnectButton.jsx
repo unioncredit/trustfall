@@ -25,7 +25,7 @@ export default function ConnectButton({ label = "Connect" }) {
             <Box direction="vertical">
               <Button
                 fluid
-                label="Connect with Wallet Connect"
+                label="Connect with WalletConnect"
                 onClick={activateWalletConnect}
               />
               <Button
