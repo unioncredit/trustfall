@@ -1,6 +1,6 @@
 import { Button, Modal, ModalOverlay, Box } from "@unioncredit/ui";
 import WalletConnectProvider from "@walletconnect/web3-provider";
-import { useEthers } from "@usedapp/core";
+import { Arbitrum, Kovan, useEthers } from "@usedapp/core";
 import { useState } from "react";
 
 export default function ConnectButton({ label = "Connect" }) {
@@ -9,6 +9,12 @@ export default function ConnectButton({ label = "Connect" }) {
 
   async function activateWalletConnect() {
     const provider = new WalletConnectProvider({
+      rpc: {
+        [Arbitrum.chainId]:
+          "https://arbitrum-mainnet.infura.io/v3/b3359a5636d64b858b26fc5cccab8578",
+        [Kovan.chainId]:
+          "https://kovan.infura.io/v3/b3359a5636d64b858b26fc5cccab8578",
+      },
       infuraId: "d8df2cb7844e4a54ab0a782f608749dd",
     });
     await provider.enable();
