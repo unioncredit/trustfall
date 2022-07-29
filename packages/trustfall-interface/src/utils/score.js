@@ -20,7 +20,7 @@ export function getPairTotals(rows) {
 }
 
 // score takes map of vouches for a staker
-export default function getScore(vouches, pairTotals, threshold = 25) {
+export default function getScore(vouches, pairTotals, threshold = 1) {
   let tot = 0;
 
   for (const [s1, v1] of vouches) {

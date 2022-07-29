@@ -5,8 +5,8 @@ import "./RoundInfo.scss";
 
 const rounds = [
   {
-    start: new Date(2022, 6, 24, 14, 20),
-    end: new Date(2022, 7, 7, 14, 20),
+    start: new Date(2022, 6, 29, 16, 20),
+    end: new Date(2022, 7, 12, 16, 20),
   },
 ];
 
