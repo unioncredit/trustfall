@@ -33,7 +33,7 @@ export default function Table({ data }) {
           <TableCell align="right">Vouch Amount</TableCell>
           <TableCell align="right">Total Score</TableCell>
         </UITableRow>
-        {data.slice(0, 10).map((row, i) => (
+        {data.map((row, i) => (
           <TableRow {...row} index={i} key={row.member} />
         ))}
       </UITable>
