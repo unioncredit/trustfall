@@ -1,5 +1,5 @@
-# Trustfall
+# Trustfall Game
 
 ### By trustfall.eth
 
-Trustfall mono repo.
+Join the game at [trustfallga.me](https://trustfallga.me/)
