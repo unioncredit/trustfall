@@ -42,7 +42,7 @@ export default function useTokenHolders() {
 
       const respWithVouches = await Promise.all(
         resp.map(async (row) => {
-          const vouches = await Promise.all(
+          let vouches = await Promise.all(
             row.stakers
               .filter((staker) =>
                 holderAddresses.includes(staker.toLowerCase())
@@ -52,6 +52,8 @@ export default function useTokenHolders() {
                 await um.getVouchingAmount(staker, row.address),
               ])
           );
+
+          vouches = vouches.filter((vouch) => vouch[1].gt(0));
 
           const vouchesSum = vouches.reduce(
             (acc, vouch) => acc.add(vouch[1]),
