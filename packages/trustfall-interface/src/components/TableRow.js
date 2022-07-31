@@ -62,7 +62,7 @@ export default function TableRow({
         </a>
       </TableCell>
       <TableCell align="right">{vouches.length}</TableCell>
-      <TableCell align="right">{commify(formatUnits(vouchesSum))}</TableCell>
+      <TableCell align="right">{format(formatUnits(vouchesSum), 2)}</TableCell>
       <TableCell align="right">{format(score, 2)}</TableCell>
     </UITableRow>
   );
