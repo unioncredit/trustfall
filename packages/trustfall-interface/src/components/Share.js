@@ -9,7 +9,7 @@ import {
 import { ReactComponent as Twitter } from "@unioncredit/ui/lib/icons/twitter.svg";
 
 const twitterLink =
-  "https://twitter.com/intent/tweet?text=I%20have%20entered%20the%20game%20of%20trust,%20money,%20and%20betrayal%20on%0A%0Ahttps%3A//trustfallga.me/";
+  "https://twitter.com/intent/tweet?text=I%20have%20entered%20the%20game%20of%20trust,%20money,%20and%20betrayal%20on%20https%3A//trustfallga.me/";
 
 export default function Share({ onClose }) {
   return (
