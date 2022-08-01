@@ -18,13 +18,7 @@ import Avatar from "components/Avatar";
 import "./Table.scss";
 import format from "utils/format";
 
-const team = [
-  "0x67ce139c5dcc845f08ce4b4e25b96b005f326b9b",
-  "0x1007a39088c22a4dfe54032f08fc47a7303603df",
-  "0xb8150a1b6945e75d05769d685b127b41e6335bbc",
-  "0x943f9fae1c7c40bb71e0484d3349a55f3268ba72",
-  "0xbabeebc4f9debc9da0abf1bbe5680554f8c97438",
-];
+const team = [];
 
 export default function TableRow({
   address,
