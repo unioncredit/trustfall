@@ -2660,10 +2660,10 @@
     jsdoc-to-markdown "^7.1.1"
     typescript "^4.6.4"
 
-"@unioncredit/ui@^0.2.0-beta.2":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@unioncredit/ui/-/ui-0.2.1.tgz#60be59081ccf8d56e4fc6cd9a27f424215d2cfe3"
-  integrity sha512-5rj0cMz7g+7WnrA10225TmzdhAmmdkMSLIFs5sjvZMxwNlTh7FDetRxFqB1O4Oe7ADsG8Fi+mabo1DrPldZpqw==
+"@unioncredit/ui@0.2.1-beta.1":
+  version "0.2.1-beta.1"
+  resolved "https://registry.yarnpkg.com/@unioncredit/ui/-/ui-0.2.1-beta.1.tgz#aef5d87785d8564af6050a1c5c6a0c39b40f40f6"
+  integrity sha512-Ii7O7HWZe1nR9CJsJ3Bs5KIJvdVa0BuCmVTD03vc71AlyCvvkgn95M6lhr1FSJSx6raIu0NN4Szm/xb4/HfZcA==
   dependencies:
     classnames "^2.3.1"
     node-sass "^7.0.1"

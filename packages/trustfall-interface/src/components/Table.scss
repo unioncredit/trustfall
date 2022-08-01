@@ -23,6 +23,8 @@
   border-radius: 8px;
   width: 100%;
 
+  overflow: hidden;
+
   @media screen and (max-width: 620px) {
     overflow-x: scroll;
   }
@@ -55,5 +57,14 @@
   .badge.badge--grey {
     background: #404040;
     color: #e5e5e5;
+  }
+
+  .badge.badge--blue {
+    color: #bdbaee;
+    background: #5046e5;
+  }
+
+  .table-cell:first-of-type {
+    padding-left: 16px;
   }
 }
