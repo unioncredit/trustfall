@@ -9,8 +9,8 @@ const rounds = [
     end: new Date(2022, 7, 12, 16, 20),
   },
   {
-    start: new Date(2022, 7, 16, 0, 0),
-    end: new Date(2022, 7, 24, 0, 0),
+    start: new Date(2022, 7, 15, 0, 0),
+    end: new Date(2022, 7, 29, 0, 0),
   },
 ];
 
