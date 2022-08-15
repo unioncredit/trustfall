@@ -1,8 +1,9 @@
 import { useEthers } from "@usedapp/core";
 import { BigNumber } from "ethers";
+import { fetchBorrows, config } from "@unioncredit/data";
+
 import { contract, nftAddress } from "hooks/useNFT";
 import { useEffect, useState } from "react";
-import getScore, { getPairTotals } from "utils/score";
 import { userManager, userManagerAddress } from "./useAccountInfo";
 import useChainId from "./useChainId";
 
@@ -14,6 +15,9 @@ export default function useTokenHolders() {
 
   useEffect(() => {
     async function fetchData() {
+      config.set("chainId", chainId);
+      const borrows = await fetchBorrows();
+
       const nft = contract.attach(nftAddress[chainId]).connect(library);
       const id = await nft.id();
 
@@ -29,49 +33,28 @@ export default function useTokenHolders() {
 
             const isMember = await um.checkIsMember(address);
             const stakers = await um.getStakerAddresses(address);
+            const borrowers = await um.getBorrowerAddresses(address);
+            const lcBorrowers = borrowers.map((x) => x.toLowerCase());
+
+            const fees = borrows.reduce((acc, borrow) => {
+              const account = borrow.account.toLowerCase();
+              if (account === address || lcBorrowers.includes(account)) {
+                return acc + Number(borrow.fee);
+              }
+              return acc;
+            }, 0);
 
             return {
               address,
               stakers,
               isMember,
+              fees,
+              score: fees,
             };
           })
       );
 
-      const holderAddresses = resp.map((r) => r.address.toLowerCase());
-
-      const respWithVouches = await Promise.all(
-        resp.map(async (row) => {
-          let vouches = await Promise.all(
-            row.stakers
-              .filter((staker) =>
-                holderAddresses.includes(staker.toLowerCase())
-              )
-              .map(async (staker) => [
-                staker,
-                await um.getVouchingAmount(staker, row.address),
-              ])
-          );
-
-          vouches = vouches.filter((vouch) => vouch[1].gt(0));
-
-          const vouchesSum = vouches.reduce(
-            (acc, vouch) => acc.add(vouch[1]),
-            BigNumber.from(0)
-          );
-
-          return { ...row, vouches, vouchesSum };
-        })
-      );
-
-      const pairTotals = getPairTotals(respWithVouches);
-
-      const respWithScores = respWithVouches.map((row) => ({
-        ...row,
-        score: getScore(row.vouches, pairTotals),
-      }));
-
-      setData(respWithScores.sort((a, b) => b.score - a.score));
+      setData(resp.sort((a, b) => b.score - a.score));
     }
 
     fetchData();
