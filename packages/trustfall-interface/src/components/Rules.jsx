@@ -12,8 +12,8 @@ export default function Rules() {
         <ul>
           <li>If you’re on the list it’ll be free</li>
           <li>
-            If you’re not on the list it’ll be 0.01 ETH to add a bit of
-            friction for Sybil
+            If you’re not on the list it’ll be 0.01 ETH to add a bit of friction
+            for Sybil
           </li>
         </ul>
         <li>Become a Union member on arbitrum</li>
@@ -61,9 +61,15 @@ export default function Rules() {
         whales don’t run the field.
       </Label>
       <Label>
-        Round 1 will assign points based on amount and size of vouch. Round 2
-        and the Finale are surprises to be announced just before the Rounds
-        begin.
+        [Complete] Round 1 will assign points based on amount and size of vouch.
+        Round 2 and the Finale are surprises to be announced just before the
+        Rounds begin.
+      </Label>
+      <Label>
+        [Active til 8/29] Round 2 will assign points based on the borrowing
+        activity of you and the people you vouch for. The more you and your
+        vouchees borrow the more points you get. eg If you borrow 1000 you get
+        5pts and everyone that vouched for you gets 5pts.
       </Label>
       <Label>
         Note: Points are tallied off chain, and we reserve the right to remove
