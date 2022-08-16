@@ -8,16 +8,20 @@ const rounds = [
     start: new Date(2022, 6, 29, 16, 20),
     end: new Date(2022, 7, 12, 16, 20),
   },
+  {
+    start: new Date(2022, 7, 15, 0, 0),
+    end: new Date(2022, 7, 29, 0, 0),
+  },
 ];
 
 export default function RoundInfo() {
   const now = new Date();
-  const msUntil = rounds[0].end.getTime() - now.getTime();
+  const msUntil = rounds[1].end.getTime() - now.getTime();
   const secondsUntil = msUntil / 1000;
 
   return (
     <Box fluid>
-      <Box className="RoundInfo" justify="space-between" align="center" fluid>
+      <Box className="RoundInfo" justify="space-between" align="center">
         <Box direction="vertical">
           <Label mb={0} color="white">
             Round 1 <span className="highlight">Vouch Round</span>
@@ -26,9 +30,6 @@ export default function RoundInfo() {
             $2,000 prize pool
           </Label>
         </Box>
-        <Label m={0} color="white" className="blackBox">
-          {relativeTime(secondsUntil)}
-        </Label>
       </Box>
 
       <Box
@@ -36,6 +37,7 @@ export default function RoundInfo() {
         justify="space-between"
         align="center"
         ml="8px"
+        fluid
       >
         <Box direction="vertical">
           <Label mb={0} color="white">
@@ -45,6 +47,9 @@ export default function RoundInfo() {
             $3,000 prize pool
           </Label>
         </Box>
+        <Label m={0} color="white" className="blackBox">
+          {relativeTime(secondsUntil)}
+        </Label>
       </Box>
 
       <Box

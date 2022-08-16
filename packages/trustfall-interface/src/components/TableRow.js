@@ -20,14 +20,7 @@ import format from "utils/format";
 
 const team = [];
 
-export default function TableRow({
-  address,
-  isMember,
-  vouches,
-  vouchesSum,
-  score,
-  index: i,
-}) {
+export default function TableRow({ address, isMember, fees, index: i }) {
   const ens = useENS(address);
   const { chainId } = useEthers();
 
@@ -85,9 +78,9 @@ export default function TableRow({
           <External className="external" width="24px" />
         </a>
       </TableCell>
-      <TableCell align="right">{vouches.length}</TableCell>
-      <TableCell align="right">{format(formatUnits(vouchesSum), 2)}</TableCell>
-      <TableCell align="right">{format(score, 2)}</TableCell>
+      <TableCell align="right">
+        {format(Number(formatUnits(fees.toString())), 2)}
+      </TableCell>
     </UITableRow>
   );
 }
