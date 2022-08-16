@@ -25,17 +25,15 @@ export default function MyStats({ data }) {
   const stats = [
     // First row
     { value: `#${accountData.index + 1}`, label: `of ${data?.length}` },
-    { value: format(accountData.score || "0", 2), label: "Your score" },
-    { value: accountData.vouches?.length || "0", label: "Vouches acq." },
     {
-      value: format(formatUnits(accountData.vouchesSum || "0") || "0", 2),
-      label: "Total Vouch (DAI)",
+      value: format(formatUnits(String(accountData.fees || "0")) || "0", 2),
+      label: "Your score",
+    },
+    {
+      value: format(formatUnits(String(accountData.fees || "0")) || "0", 2),
+      label: "Originatons (DAI)",
     },
     // Second row
-    {
-      value: format(results.getBorrowerAddresses?.length || "0"),
-      label: "Vouches Given",
-    },
     {
       value: format(formatUnits(results.getStakerBalance || "0"), 2),
       label: "Stake (DAI)",
