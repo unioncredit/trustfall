@@ -1,0 +1,1930 @@
+[
+    {
+        "address": "0xd3e3b95ed0edc914Bf0A0d78ac758d735392A3a4",
+        "stakers": [
+            "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+            "0x1F06592d660D41D2a1dF41bA074406a3dbDf1aB8"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x015af1d78b58c40000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x07518058bd45bc0000"
+        },
+        "score": 321.95427796719
+    },
+    {
+        "address": "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+            "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+            "0xd0130E1E74651539675A04e202d35D30F226cF20",
+            "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+            "0xB894b00a5Bf20F1a781dC61F06923bE55ACFfDad",
+            "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+            "0x3F469087671397692e05Ef47aC893eE46F5d45Ec",
+            "0x99Fa48ccEa8a38CDE6B437450fF9bBdDAFAA4Fc8",
+            "0x8d07D225a769b7Af3A923481E1FdF49180e6A265",
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+            "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x052663ccab1e1c0000"
+                }
+            ],
+            [
+                "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x6c6b935b8bbd400000"
+                }
+            ],
+            [
+                "0xd0130E1E74651539675A04e202d35D30F226cF20",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x015af1d78b58c40000"
+                }
+            ],
+            [
+                "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ],
+            [
+                "0xB894b00a5Bf20F1a781dC61F06923bE55ACFfDad",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x05c950a8779d320000"
+                }
+            ],
+            [
+                "0x99Fa48ccEa8a38CDE6B437450fF9bBdDAFAA4Fc8",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x8d07D225a769b7Af3A923481E1FdF49180e6A265",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x015af1d78b58c40000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x88b42c313fb58e0000"
+        },
+        "score": 13964.425974705764
+    },
+    {
+        "address": "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+        "stakers": [
+            "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x497C20fEd24D61C7506EF2500065e4fd662f3779",
+            "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+            "0x3197e105Bac6735B2f593A265f6147f133ece255",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x16c4abbebea0100000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ],
+            [
+                "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x05c950a8779d320000"
+                }
+            ],
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x5150ae84a8cdf00000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ],
+            [
+                "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0xd02ab486cedc0000"
+                }
+            ],
+            [
+                "0x3197e105Bac6735B2f593A265f6147f133ece255",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x76d080ada9eea60000"
+        },
+        "score": 6440.807352519106
+    },
+    {
+        "address": "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+        "stakers": [
+            "0x497C20fEd24D61C7506EF2500065e4fd662f3779",
+            "0xFC32E7c7c55391ebb4F91187c91418bF96860cA9",
+            "0xE4261DFe12b258687C0a274F823B8c96899c7E21",
+            "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x7a0C61EdD8b5c0c5C1437AEb571d7DDbF8022Be4",
+            "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+            "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+            "0x3F469087671397692e05Ef47aC893eE46F5d45Ec",
+            "0xd0130E1E74651539675A04e202d35D30F226cF20",
+            "0xDed86dB976fc9aE590B75D52b53212f586A45DB2",
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+            "0xFf32A474f5AB9B209F2292CA6E97e685e726725F"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x42e530adfce0080000"
+                }
+            ],
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x05c950a8779d320000"
+                }
+            ],
+            [
+                "0xd0130E1E74651539675A04e202d35D30F226cF20",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ],
+            [
+                "0xDed86dB976fc9aE590B75D52b53212f586A45DB2",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ],
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x52fb48efcab9720000"
+        },
+        "score": 9138.651695696997
+    },
+    {
+        "address": "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+        "stakers": [
+            "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+            "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+            "0xD4e6fd78c21085d01DBd596d287360d746Acf4d8",
+            "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+            "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x16c4abbebea0100000"
+                }
+            ],
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0xD4e6fd78c21085d01DBd596d287360d746Acf4d8",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0de0b6b3a7640000"
+                }
+            ],
+            [
+                "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x015af1d78b58c40000"
+                }
+            ],
+            [
+                "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x2b6ffe6aa2f90000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x255b9993d530f10000"
+        },
+        "score": 13387.034228354802
+    },
+    {
+        "address": "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+        "stakers": [
+            "0xFC32E7c7c55391ebb4F91187c91418bF96860cA9",
+            "0xE4261DFe12b258687C0a274F823B8c96899c7E21",
+            "0x497C20fEd24D61C7506EF2500065e4fd662f3779",
+            "0x10797cA7684310b988f114F157EeD6933Fe70c07",
+            "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+            "0x8d07D225a769b7Af3A923481E1FdF49180e6A265",
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x05c950a8779d320000"
+                }
+            ],
+            [
+                "0x8d07D225a769b7Af3A923481E1FdF49180e6A265",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x3635c9adc5dea00000"
+                }
+            ],
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x416ae1b46adee20000"
+        },
+        "score": 1296.4798446788734
+    },
+    {
+        "address": "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+        "stakers": [
+            "0x3F469087671397692e05Ef47aC893eE46F5d45Ec",
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02df85d331a7b40000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0e873f44133cb00000"
+        },
+        "score": 1681.3911542768183
+    },
+    {
+        "address": "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+        "stakers": [
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x869FB79d3BA84bD5D3Fcd7B315ADBCB3767e8354"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0ad78ebc5ac6200000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0c328093e61ee40000"
+        },
+        "score": 305.3921278113047
+    },
+    {
+        "address": "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+        "stakers": [
+            "0x497C20fEd24D61C7506EF2500065e4fd662f3779",
+            "0xFC32E7c7c55391ebb4F91187c91418bF96860cA9",
+            "0xE4261DFe12b258687C0a274F823B8c96899c7E21",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+            "0x99Fa48ccEa8a38CDE6B437450fF9bBdDAFAA4Fc8",
+            "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+            "0x8d07D225a769b7Af3A923481E1FdF49180e6A265"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x3635c9adc5dea00000"
+                }
+            ],
+            [
+                "0x99Fa48ccEa8a38CDE6B437450fF9bBdDAFAA4Fc8",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x8d07D225a769b7Af3A923481E1FdF49180e6A265",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x1b1ae4d6e2ef500000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x5220d9392f9ccc0000"
+        },
+        "score": 2063.0612107630723
+    },
+    {
+        "address": "0x75bBC7d37D3bf975b527CF2e99b947D61A22EF95",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x8c580556Fdb1f57853e49F409Ae9b89f7658e7A2",
+        "stakers": [
+            "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x08ac7230489e800000"
+        },
+        "score": 418.1510969159823
+    },
+    {
+        "address": "0xd0130E1E74651539675A04e202d35D30F226cF20",
+        "stakers": [
+            "0xFf32A474f5AB9B209F2292CA6E97e685e726725F"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0de0b6b3a7640000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0de0b6b3a7640000"
+        },
+        "score": 14.285714285714285
+    },
+    {
+        "address": "0x684f49bc1e04339d84F2370f14Dc1491A3B4F113",
+        "stakers": [
+            "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x01a055690d9db80000"
+        },
+        "score": 305.46178347833376
+    },
+    {
+        "address": "0x99Fa48ccEa8a38CDE6B437450fF9bBdDAFAA4Fc8",
+        "stakers": [
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0ad78ebc5ac6200000"
+        },
+        "score": 176.53182582636077
+    },
+    {
+        "address": "0x7d0cE9bB923233868B8dFF5aD4b20Bc4a11e85Bc",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x714D7baF5067855EBa892296B6C6D94a09857010",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0xDed86dB976fc9aE590B75D52b53212f586A45DB2",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x01158e460913d00000"
+        },
+        "score": 0.5637773079633545
+    },
+    {
+        "address": "0x375Cf42640e384D04314cB1B76a36d1D2924460a",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x1466D84CB04940A504574AB02D130a8F3185839c",
+        "stakers": [
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+            "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+            "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+            "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+            "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+            "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+            "0x3197e105Bac6735B2f593A265f6147f133ece255",
+            "0xF9b9208A194DeAa9337e596D0a181FdC43B6B6C3",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+            "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+            "0x3c6DfB5D608c4849d289d81d8bfcCBD48d86d0a8",
+            "0x13f7b24bc1a3dE268814c0bB709CD5E6E296765C"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0de0b6b3a7640000"
+                }
+            ],
+            [
+                "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0ad78ebc5ac6200000"
+                }
+            ],
+            [
+                "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+                {
+                    "type": "BigNumber",
+                    "hex": "0xd02ab486cedc0000"
+                }
+            ],
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ],
+            [
+                "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x015af1d78b58c40000"
+                }
+            ],
+            [
+                "0x3197e105Bac6735B2f593A265f6147f133ece255",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ],
+            [
+                "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x3c6DfB5D608c4849d289d81d8bfcCBD48d86d0a8",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0f43fc2c04ee0000"
+                }
+            ],
+            [
+                "0x13f7b24bc1a3dE268814c0bB709CD5E6E296765C",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x1f48df1064a5ee0000"
+        },
+        "score": 24692.16037902112
+    },
+    {
+        "address": "0xB894b00a5Bf20F1a781dC61F06923bE55ACFfDad",
+        "stakers": [
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0b1cf24ddd0b140000"
+        },
+        "score": 326.8258090901679
+    },
+    {
+        "address": "0x231783F2f460C0ccAEFdcF028EFEF8302a0F1353",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x729dF3924822C9a2CA1995c05Eb801A395329F35",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x28183DfBDA30a751122c59d58ADe50c70b532705",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x13ebd3443fa5575F0Eb173e323D8419F7452CfB1",
+        "stakers": [
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0ad78ebc5ac6200000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x1043561a8829300000"
+        },
+        "score": 111.15198802737716
+    },
+    {
+        "address": "0x97b102e00d88F02DEBfD6b1e4B901Dd6931bB982",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x227FD2fD881Cc6c99DFCcc0FB40f2B1dc2f3F36E",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x113b84cDa038587f0e7a5e6bdb74Cb03CfCc4f23",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x3197e105Bac6735B2f593A265f6147f133ece255",
+        "stakers": [
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x01158e460913d00000"
+        },
+        "score": 85.79507114103802
+    },
+    {
+        "address": "0xDcdB53E8E1123BAA64a0B7d3Da13E360CA843797",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x6094Fb01F02BB47db10DD7c61c4320fd185D27f3",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0d8d726b7177a80000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0d8d726b7177a80000"
+        },
+        "score": 7.047216349541931
+    },
+    {
+        "address": "0x708621feA6a3e127f775886f4fcC5A7EDC6cc736",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x2eF2284A784C1fA06f95919Fab978E87Da18BC66",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+        "stakers": [
+            "0xd0130E1E74651539675A04e202d35D30F226cF20",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+            "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xd0130E1E74651539675A04e202d35D30F226cF20",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0de0b6b3a7640000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x2b6ffe6aa2f90000"
+                }
+            ],
+            [
+                "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x05ea7ba4cdf2610000"
+        },
+        "score": 1320.6661189311933
+    },
+    {
+        "address": "0x6B134e9C0F4e8Dec58756a19eCd15697d2454435",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x34B11efA837d5b01E3363e5C590B472A0a6BBADA",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x9C5dDe694EF0b1c17a7EF6ae2E58b7Ed8B1Bd56F",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x3635c9adc5dea00000"
+                }
+            ],
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x03c3656232739e0000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x39f92f0ff8523e0000"
+        },
+        "score": 193.1279259644236
+    },
+    {
+        "address": "0xb19BC46C52A1352A071fe2389503B6FE1ABD50Ff",
+        "stakers": [
+            "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+            "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x03c36562327993e100"
+                }
+            ],
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ],
+            [
+                "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0ad78ebc5ac6200000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x1561ad5445fb87e100"
+        },
+        "score": 2655.92108828003
+    },
+    {
+        "address": "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+        "stakers": [
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+            "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x03c3656232739e0000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+                {
+                    "type": "BigNumber",
+                    "hex": "0xd02ab486cedc0000"
+                }
+            ],
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0acf82296d74660000"
+        },
+        "score": 1665.5740340072762
+    },
+    {
+        "address": "0x1F06592d660D41D2a1dF41bA074406a3dbDf1aB8",
+        "stakers": [
+            "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+            "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ],
+            [
+                "0x5A1b8d6A57445deCED8F816310fDB0aA6367cf10",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x097c9ce4cf6d5c0000"
+        },
+        "score": 893.1040868454669
+    },
+    {
+        "address": "0xCED608Aa29bB92185D9b6340Adcbfa263DAe075b",
+        "stakers": [
+            "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F"
+        ],
+        "isMember": false,
+        "vouches": [
+            [
+                "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x02b5e3af16b1880000"
+        },
+        "score": 105.26315789473684
+    },
+    {
+        "address": "0xfB1D7F6c700A053683f80447B387A891D5f76aaC",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": false,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x1b1ae4d6e2ef500000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x1b1ae4d6e2ef500000"
+        },
+        "score": 14.094432699083862
+    },
+    {
+        "address": "0x9568ac5Ba202c7AF2d3971a46C02b56Fe0dc0391",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x8d07D225a769b7Af3A923481E1FdF49180e6A265",
+        "stakers": [
+            "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xb8150a1B6945e75D05769D685b127b41E6335Bbc",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x16c4abbebea0100000"
+                }
+            ],
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x3635c9adc5dea00000"
+                }
+            ],
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x585ccb4be3ceb80000"
+        },
+        "score": 1978.614681290699
+    },
+    {
+        "address": "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+        "stakers": [
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x015af1d78b58c40000"
+                }
+            ],
+            [
+                "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x119e47f21381f40000"
+        },
+        "score": 920.3230772400171
+    },
+    {
+        "address": "0xAdC24d7b630759A3AF7f52716d91299c999a2213",
+        "stakers": [
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xd0f46a5d48596409264d4eFc1f3B229878fFf743",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0b1cf24ddd0b140000"
+        },
+        "score": 419.5607694582092
+    },
+    {
+        "address": "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+        "stakers": [
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+            "0xA333100CA865Cd8b504e99FAF0a578b199EC49Fe",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0de0b6b3a7640000"
+                }
+            ],
+            [
+                "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x62f2d93940890000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x066762111ed4e50000"
+        },
+        "score": 257.2508789798127
+    },
+    {
+        "address": "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+        "stakers": [
+            "0xDed86dB976fc9aE590B75D52b53212f586A45DB2",
+            "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+            "0x3197e105Bac6735B2f593A265f6147f133ece255",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0x033c6728cE67510feaE338BB1d2ceD699A6a27a4",
+            "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xDed86dB976fc9aE590B75D52b53212f586A45DB2",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x01158e460913d00000"
+                }
+            ],
+            [
+                "0x224aBa5D489675a7bD3CE07786FAda466b46FA0F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x3197e105Bac6735B2f593A265f6147f133ece255",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ],
+            [
+                "0x033c6728cE67510feaE338BB1d2ceD699A6a27a4",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x3635c9adc5dea00000"
+                }
+            ],
+            [
+                "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x3ba1910bf341b00000"
+        },
+        "score": 5050.270760821699
+    },
+    {
+        "address": "0x954C057227b227f56B3e1D8C3c279F6aF016d0e5",
+        "stakers": [
+            "0x497C20fEd24D61C7506EF2500065e4fd662f3779",
+            "0xFC32E7c7c55391ebb4F91187c91418bF96860cA9",
+            "0xE4261DFe12b258687C0a274F823B8c96899c7E21"
+        ],
+        "isMember": true,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x6fb47C08c716dcB8CdF964F0c95bFc2c82206FCb",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0xf6fDeE29e3A14610fdbE187e2d3442543cfA45B8",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": false,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x3635c9adc5dea00000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x3635c9adc5dea00000"
+        },
+        "score": 28.188865398167724
+    },
+    {
+        "address": "0xD4e6fd78c21085d01DBd596d287360d746Acf4d8",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x056bc75e2d63100000"
+        },
+        "score": 2.8188865398167726
+    },
+    {
+        "address": "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+        "stakers": [
+            "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+            "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+            "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+            "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xcCE9A28b570946123f392Cf1DbfA6D2D5e636a1f",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x015af1d78b58c40000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ],
+            [
+                "0xFf32A474f5AB9B209F2292CA6E97e685e726725F",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x1bc16d674ec80000"
+                }
+            ],
+            [
+                "0x96e1D9132e9Dee088cd79cc664316a16dFe490C6",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x307D79DaE9A485D4D63e9A6B530C91E8eFDE2366",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x6f05b59d3b200000"
+                }
+            ],
+            [
+                "0x943F9FAe1C7C40Bb71E0484d3349A55f3268Ba72",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x02b5e3af16b1880000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0cbd47b6eaa8cc0000"
+        },
+        "score": 2574.0711318157505
+    },
+    {
+        "address": "0x381a034325dcF0687888815461F26F5F8C559e13",
+        "stakers": [
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x033c6728cE67510feaE338BB1d2ceD699A6a27a4",
+        "stakers": [
+            "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x3db00D1334B5faDd2A897D8A702cDCbb6F159D87",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x3635c9adc5dea00000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x3635c9adc5dea00000"
+        },
+        "score": 178.57142857142858
+    },
+    {
+        "address": "0x42225B0C8C3f0c7C4d5B21a008a899e9a4992788",
+        "stakers": [],
+        "isMember": false,
+        "vouches": [],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "score": 0
+    },
+    {
+        "address": "0x13f7b24bc1a3dE268814c0bB709CD5E6E296765C",
+        "stakers": [
+            "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x67CE139C5DCC845F08CE4b4E25B96B005f326B9B",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x05f68e8131ecf80000"
+        },
+        "score": 117.93271209968171
+    },
+    {
+        "address": "0x3c6DfB5D608c4849d289d81d8bfcCBD48d86d0a8",
+        "stakers": [
+            "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+            "0x1466D84CB04940A504574AB02D130a8F3185839c",
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0x1007A39088C22A4dfe54032F08fC47A7303603Df",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x8ac7230489e80000"
+                }
+            ],
+            [
+                "0x1466D84CB04940A504574AB02D130a8F3185839c",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x4563918244f40000"
+                }
+            ],
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0xb469471f80140000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x018493fba64ef00000"
+        },
+        "score": 60.197831108712116
+    },
+    {
+        "address": "0x4EE9267083C79030832886Fe668177A4D99E813b",
+        "stakers": [
+            "0xD4e6fd78c21085d01DBd596d287360d746Acf4d8",
+            "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xD4e6fd78c21085d01DBd596d287360d746Acf4d8",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x1b1ae4d6e2ef500000"
+                }
+            ],
+            [
+                "0xBABEEbC4f9dEbc9DA0ABf1Bbe5680554F8c97438",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x056bc75e2d63100000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x2086ac351052600000"
+        },
+        "score": 626.6702586381565
+    },
+    {
+        "address": "0x8b67e17597e7dCA9Dd9ec18d96524565BD18b755",
+        "stakers": [
+            "0xE21723C250D06F5eE67bc9AdEF211B65E6099263"
+        ],
+        "isMember": true,
+        "vouches": [
+            [
+                "0xE21723C250D06F5eE67bc9AdEF211B65E6099263",
+                {
+                    "type": "BigNumber",
+                    "hex": "0x0de0b6b3a7640000"
+                }
+            ]
+        ],
+        "vouchesSum": {
+            "type": "BigNumber",
+            "hex": "0x0de0b6b3a7640000"
+        },
+        "score": 0.6053451980992162
+    }
+]
