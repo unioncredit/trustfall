@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { Parser } = require("json2csv");
 
 const baseTransaction = {
   version: "1.0",
@@ -52,6 +53,7 @@ function main() {
     .filter((x) => x.score > 0)
     .map((x) => ({
       borrower_: x.address,
+      score: x.score,
       trustAmount: Math.ceil((x.score / Number(scoreSum)) * totalPrize),
     }))
     .map((x) => ({ ...x, trustAmount: x.trustAmount < 1 ? 1 : x.trustAmount }));
@@ -76,6 +78,20 @@ function main() {
   const savePath = "./round-1-results-transaction.json";
   fs.writeFileSync(savePath, JSON.stringify(transaction));
   console.log("[*] Transaction saved to:", savePath);
+
+  // Create csv and save
+  const fields = ["address", "score", "vouch"];
+  const parser = new Parser({ fields });
+  const csv = parser.parse(
+    values.map((x) => ({
+      address: x.borrower_,
+      score: x.score,
+      vouch: x.trustAmount,
+    }))
+  );
+  const csvPath = "./round-1-results.csv";
+  fs.writeFileSync(csvPath, csv);
+  console.log("[*] CSV saved to:", csvPath);
 }
 
 main();
