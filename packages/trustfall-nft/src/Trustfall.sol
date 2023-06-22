@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.11;
+pragma solidity ^0.8.0;
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
@@ -23,7 +23,11 @@ contract Trustfall is Ownable {
      Constructor 
     ----------------------------------------------- */
 
-    constructor(uint256 _mintCost, address _userManager) {
+    constructor(
+        address owner,
+        uint256 _mintCost,
+        address _userManager
+    ) Ownable(owner) {
         userManager = _userManager;
         mintCost = _mintCost;
     }

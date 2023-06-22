@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.11;
+pragma solidity ^0.8.0;
 
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
@@ -40,11 +40,12 @@ contract TrustfallNFT is ERC721, Ownable {
     ----------------------------------------------- */
 
     constructor(
+        address owner,
         string memory name,
         string memory symbol,
         address _trustfall,
         address[] memory _premine
-    ) ERC721(name, symbol) {
+    ) ERC721(name, symbol) Ownable(owner) {
         trustfall = _trustfall;
 
         uint256 premineLen = _premine.length;
