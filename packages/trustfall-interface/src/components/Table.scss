@@ -19,7 +19,7 @@
 }
 
 .tableWrapper {
-  border: 1px solid #404040;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 100%;
 
@@ -39,8 +39,8 @@
   }
 
   .table-cell {
-    border-bottom: 1px solid #404040;
-    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: black;
     font-size: 14px;
     line-height: 20px;
   }
@@ -50,13 +50,13 @@
     margin-left: 4px;
 
     & > path:nth-child(1) {
-      fill: #1e1e1e;
+      fill: rgba(0, 0, 0, 0.1);
     }
   }
 
   .badge.badge--grey {
-    background: #404040;
-    color: #e5e5e5;
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
   }
 
   .badge.badge--blue {

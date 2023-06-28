@@ -12,7 +12,11 @@ import "./ClaimNFT.scss";
 
 const mintCost = "10000000000000000"; // 0.01 ETH
 
-export default function ClaimNFT({ setShowShare, accountBalance, refreshData }) {
+export default function ClaimNFT({
+  setShowShare,
+  accountBalance,
+  refreshData,
+}) {
   const [loading, setLoading] = useState(false);
   const { account } = useEthers();
   const info = useAccountInfo();
@@ -37,55 +41,22 @@ export default function ClaimNFT({ setShowShare, accountBalance, refreshData }) 
   };
 
   return (
-    <Box className="ClaimNFT" fluid>
-      <Box className="ClaimNFT__imageContainer">
-        <div className="ClaimNFT__image">
-          <img src="/nft.png" />
-        </div>
-      </Box>
-      <Box direction="vertical" fluid>
-        <Box justify="space-between" fluid className="ClaimNFT__header">
-          <Text mb="8px">The Trustfall Ticket NFT</Text>
+    <Box className="ClaimNFT" fluid direction="vertical">
+      <Box fluid mb="16px">
+        <Box direction="vertical" fluid>
+          <Text mb={0}>Select your team</Text>
           <Box align="center">
-            <Info width="24px" />
             <Label m={0} as="p" size="small">
-              10,000 DAI Vouch Pool
+              Once chosen forever bound
             </Label>
           </Box>
         </Box>
-        <Divider my={0} />
-        <Label
-          as="p"
-          mt="11px"
-          mb="4px"
-          className="ClaimNFT__highlightedHeader"
-        >
-          Who can redeem a Trustfall ticket?
-        </Label>
-        <ul>
-          <li>Union Protocol Members</li>
-          <li>Anyone (for Ξ 0.01)</li>
-          <li>Members of the Myrmidons</li>
-        </ul>
-        <Box mt="10px" className="ClaimNFT__tickItems">
-          <Box
-            align="center"
-            mr="8px"
-            className={info.checkIsMember ? "active" : ""}
-          >
-            <Tick width="24px" />
-            Union Member
-          </Box>
-        </Box>
-        <Box mt="12px">
+        <Box>
           {account ? (
             !accountBalance ? (
               <Button label="Loading wallet status" disabled={true} />
             ) : accountBalance.gt(0) ? (
-              <Button
-                label="Congratulations wallet already claimed"
-                disabled={true}
-              />
+              <Button label="Already claimed" disabled={true} />
             ) : (
               <Box align="center">
                 <Button
@@ -112,6 +83,40 @@ export default function ClaimNFT({ setShowShare, accountBalance, refreshData }) 
             <ConnectButton label="Connet Wallet to Redeem" />
           )}
         </Box>
+      </Box>
+      <Box fluid>
+        <div className="ClaimNFT__team ClaimNFT__team--cyan">
+          <Text>Cyan</Text>
+          <Text>
+            Team of 48
+            <br />
+            69,420 Points
+          </Text>
+        </div>
+        <div className="ClaimNFT__team ClaimNFT__team--magenta">
+          <Text>Magenta</Text>
+          <Text>
+            Team of 48
+            <br />
+            69,420 Points
+          </Text>
+        </div>
+        <div className="ClaimNFT__team ClaimNFT__team--yellow">
+          <Text>Yellow</Text>
+          <Text>
+            Team of 48
+            <br />
+            69,420 Points
+          </Text>
+        </div>
+        <div className="ClaimNFT__team ClaimNFT__team--black">
+          <Text>Black</Text>
+          <Text>
+            Team of 48
+            <br />
+            69,420 Points
+          </Text>
+        </div>
       </Box>
     </Box>
   );

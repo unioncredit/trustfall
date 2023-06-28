@@ -1,8 +1,6 @@
 .ClaimNFT {
-  background: #262626;
-  border: 1px solid #404040;
+  background: white;
   border-radius: 8px;
-  padding: 16px;
   box-sizing: border-box;
 
   &__header {
@@ -12,7 +10,7 @@
   }
 
   &__highlightedHeader {
-    color: #818cf8 !important;
+    color: black !important;
   }
 
   &__imageContainer {
@@ -66,7 +64,7 @@
 
   .text,
   .label {
-    color: white;
+    color: black;
   }
 
   li {
@@ -80,6 +78,52 @@
       margin-bottom: 24px;
       margin-right: 0;
       width: 100%;
+    }
+  }
+
+  &__team {
+    width: calc(25% + 6px);
+    background: none;
+    border-radius: 4px;
+    position: relative;
+    margin-right: -8px;
+    padding: 22px 16px;
+    box-sizing: border-box;
+
+    .text:nth-of-type(1) {
+      font-size: 24px;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .text:nth-of-type(2) {
+      font-size: 12px;
+      line-height: unset;
+      margin: 0;
+    }
+
+    &--cyan {
+      background: #00d1ff;
+      .text {
+        color: #2ea000;
+      }
+    }
+    &--magenta {
+      background: #fa00ff;
+      .text {
+        color: #1a00ff;
+      }
+    }
+    &--yellow {
+      background: #ffc700;
+      .text {
+        color: #f53202;
+      }
+    }
+    &--black {
+      background: black;
+      .text {
+        color: white;
+      }
     }
   }
 }

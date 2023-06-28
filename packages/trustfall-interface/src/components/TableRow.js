@@ -78,6 +78,10 @@ export default function TableRow({ address, isMember, fees, index: i }) {
           <External className="external" width="24px" />
         </a>
       </TableCell>
+      <TableCell align="center"></TableCell>
+      <TableCell align="right">
+        {format(Number(formatUnits(fees.toString())), 2)}
+      </TableCell>
       <TableCell align="right">
         {format(Number(formatUnits(fees.toString())), 2)}
       </TableCell>

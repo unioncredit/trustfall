@@ -1,12 +1,12 @@
 .MyStats {
-  background: #262626;
+  background: white;
   border: 1px solid #404040;
   border-radius: 8px;
   padding: 16px;
   box-sizing: border-box;
 
   .goToUnionButton svg path {
-    fill: white;
+    fill: black;
   }
 
   &__header {

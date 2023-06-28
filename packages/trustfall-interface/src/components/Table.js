@@ -29,7 +29,9 @@ export default function Table({ data }) {
           <TableCell fixedSize></TableCell>
           <TableCell fixedSize></TableCell>
           <TableCell>Account</TableCell>
-          <TableCell align="right">Originations</TableCell>
+          <TableCell align="center">Team</TableCell>
+          <TableCell align="right">Total Score</TableCell>
+          <TableCell align="right">Total Score</TableCell>
         </UITableRow>
         {data.map((row, i) => (
           <TableRow {...row} index={i} key={row.member} />

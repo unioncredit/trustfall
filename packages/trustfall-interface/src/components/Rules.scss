@@ -1,19 +1,19 @@
 .Rules {
-  background: #262626;
-  border: 1px solid #404040;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 16px;
   box-sizing: border-box;
 
   .text,
   .heading {
-    color: white;
+    color: black;
   }
 
   li,
   .label,
   td {
-    color: #a3a3a3;
+    color: grey;
   }
 
   li {
@@ -27,7 +27,7 @@
 
   td {
     font-size: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 8px;
   }
 }

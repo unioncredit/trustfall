@@ -7,9 +7,31 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Trustfall by Union" />
     <title>Trustfall by Union</title>
+    <style>
+      #linear-gradient-top {
+        width: 100vw;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: -180px;
+        filter: blur(80px);
+        opacity: 0.5;
+        background: rgb(0, 240, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(0, 240, 255, 1) 0%,
+          rgba(255, 199, 0, 1) 18%,
+          rgba(250, 0, 255, 1) 39%,
+          rgba(255, 199, 0, 1) 58%,
+          rgba(0, 240, 255, 1) 75%,
+          rgba(250, 0, 255, 1) 89%
+        );
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="linear-gradient-top"></div>
     <div id="root"></div>
   </body>
 </html>

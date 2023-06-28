@@ -4,7 +4,6 @@ import { Grid, Box } from "@unioncredit/ui";
 
 import ClaimNFT from "components/ClaimNFT";
 import Table from "components/Table";
-import RoundInfo from "components/RoundInfo";
 import { useNFTCall } from "hooks/useNFT";
 import MyStats from "components/MyStats";
 import useTokenHolders from "hooks/useTokenHolders";
@@ -23,9 +22,6 @@ function Leaderboard() {
     <>
       <Grid.Row>
         <Grid.Col>
-          <Box mb="16px" fluid>
-            <RoundInfo />
-          </Box>
           {balances?.[0].gt(0) ? (
             <MyStats data={holders} />
           ) : (
