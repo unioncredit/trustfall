@@ -34,7 +34,16 @@ export default function Table({ data }) {
           <TableCell align="right">Total Score</TableCell>
         </UITableRow>
         {data.map((row, i) => (
-          <TableRow {...row} index={i} key={row.member} />
+          <TableRow
+            {...row}
+            team={
+              ["cyan", "magenta", "yellow", "black"][
+                Math.floor(Math.random() * 4)
+              ]
+            }
+            index={i}
+            key={row.member}
+          />
         ))}
       </UITable>
     </div>

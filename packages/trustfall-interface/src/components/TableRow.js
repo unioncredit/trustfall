@@ -20,7 +20,7 @@ import format from "utils/format";
 
 const team = [];
 
-export default function TableRow({ address, isMember, fees, index: i }) {
+export default function TableRow({ team, address, isMember, fees, index: i }) {
   const ens = useENS(address);
   const { chainId } = useEthers();
 
@@ -78,7 +78,9 @@ export default function TableRow({ address, isMember, fees, index: i }) {
           <External className="external" width="24px" />
         </a>
       </TableCell>
-      <TableCell align="center"></TableCell>
+      <TableCell align="center">
+        <div className={`team-square team-square--${team}`}></div>
+      </TableCell>
       <TableCell align="right">
         {format(Number(formatUnits(fees.toString())), 2)}
       </TableCell>
