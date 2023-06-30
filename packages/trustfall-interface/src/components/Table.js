@@ -8,6 +8,7 @@ import {
 import TableRow from "./TableRow";
 
 import "./Table.scss";
+import { TEAMS } from "../constants";
 
 export default function Table({ data }) {
   if (!data) {
@@ -29,20 +30,16 @@ export default function Table({ data }) {
           <TableCell fixedSize></TableCell>
           <TableCell fixedSize></TableCell>
           <TableCell>Account</TableCell>
-          <TableCell align="center">Team</TableCell>
-          <TableCell align="right">Total Score</TableCell>
+          <TableCell align="right">Team</TableCell>
+          <TableCell align="right">Vouch Amount</TableCell>
           <TableCell align="right">Total Score</TableCell>
         </UITableRow>
         {data.map((row, i) => (
           <TableRow
             {...row}
-            team={
-              ["cyan", "magenta", "yellow", "black"][
-                Math.floor(Math.random() * 4)
-              ]
-            }
             index={i}
             key={row.member}
+            team={TEAMS[Math.floor(Math.random() * 4)]}
           />
         ))}
       </UITable>

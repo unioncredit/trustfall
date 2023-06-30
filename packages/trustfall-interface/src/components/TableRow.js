@@ -58,28 +58,15 @@ export default function TableRow({ team, address, isMember, fees, index: i }) {
       <TableCell>
         {address.slice(0, 6)}...{address.slice(-4)}
         {ens.name && <Badge color="grey" label={ens.name} ml="8px" />}
-        {team.includes(address.toLowerCase()) && (
-          <Tooltip
-            content={
-              <>
-                Union Team Member
-                <br />
-                Not eligible for prize
-              </>
-            }
-            position="right"
-          >
-            <Box ml="4px">
-              <UnionWhite width="24px" />
-            </Box>
-          </Tooltip>
-        )}
-        <a href={getEtherscanLink(chainId, address, "ADDRESS")} target="_blank">
+        <a href={getEtherscanLink(chainId, address, "ADDRESS")} target="_blank" rel="noreferrer">
           <External className="external" width="24px" />
         </a>
       </TableCell>
-      <TableCell align="center">
-        <div className={`team-square team-square--${team}`}></div>
+      <TableCell align="flex-end">
+        <Box justify="flex-end" align="center">
+          {team.label}
+          <div className={`team-square team-square--${team.key}`}></div>
+        </Box>
       </TableCell>
       <TableCell align="right">
         {format(Number(formatUnits(fees.toString())), 2)}

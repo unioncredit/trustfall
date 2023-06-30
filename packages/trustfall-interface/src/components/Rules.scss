@@ -1,13 +1,16 @@
 .Rules {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 16px;
   box-sizing: border-box;
+  max-width: 624px;
 
   .text,
   .heading {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .heading {
     color: black;
+    font-weight: 400;
   }
 
   li,

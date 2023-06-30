@@ -1,11 +1,14 @@
+import "./ConnectButton.scss";
+
 import { Button, Modal, ModalOverlay, Box } from "@unioncredit/ui";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { Arbitrum, Kovan, useEthers } from "@usedapp/core";
 import { useState } from "react";
+import { default as cn } from "classnames";
 
 export default function ConnectButton({ label = "Connect" }) {
   const [open, setOpen] = useState(false);
-  const { activate, activateBrowserWallet } = useEthers();
+  const { account, deactivate, activate, activateBrowserWallet } = useEthers();
 
   async function activateWalletConnect() {
     const provider = new WalletConnectProvider({
@@ -24,7 +27,13 @@ export default function ConnectButton({ label = "Connect" }) {
 
   return (
     <>
-      <Button label={label} onClick={() => setOpen(true)} />
+      <Button
+        label={account ? "Disconnect" : label}
+        onClick={() => account ? deactivate() : setOpen(true)}
+        className={cn("ConnectButton", {
+          "ConnectButton--connected": account
+        })}
+      />
       {open && (
         <ModalOverlay onClick={() => setOpen(false)}>
           <Modal title="Connect Wallet" onClose={() => setOpen(false)}>

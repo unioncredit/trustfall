@@ -25,7 +25,7 @@ export const config = {
 
 setGridConfiguration({
   breakpoints: [410, 611, 992, 1200, 1600, 1920],
-  containerWidths: [410, 624, 624, 624, 624, 624],
+  containerWidths: [410, 1253, 1253, 1253, 1253, 1253],
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
