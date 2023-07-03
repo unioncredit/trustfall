@@ -20,3 +20,10 @@ export const TEAMS = [
     label: "Black",
   },
 ];
+
+export const TEAM_IDS = {
+  CYAN: 0,
+  MAGENTA: 1,
+  YELLOW: 2,
+  BLACK: 3,
+};

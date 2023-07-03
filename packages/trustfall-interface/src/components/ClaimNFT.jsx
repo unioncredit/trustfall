@@ -1,14 +1,14 @@
+import "./ClaimNFT.scss";
+
 import { useState } from "react";
 import { useEthers } from "@usedapp/core";
-import { Box, Text, Label, Button, Divider } from "@unioncredit/ui";
-import { ReactComponent as Info } from "@unioncredit/ui/lib/icons/wireInfo.svg";
-import { ReactComponent as Tick } from "@unioncredit/ui/lib/icons/wireCheck.svg";
+import { default as cn } from "classnames";
+import { Box, Text, Label, Button } from "@unioncredit/ui";
 
 import useNFT from "hooks/useNFT";
 import useAccountInfo from "hooks/useAccountInfo";
 import ConnectButton from "components/ConnectButton";
-
-import "./ClaimNFT.scss";
+import { TEAMS } from "../constants";
 
 const mintCost = "10000000000000000"; // 0.01 ETH
 
@@ -17,7 +17,10 @@ export default function ClaimNFT({
   accountBalance,
   refreshData,
 }) {
+  const [team, setTeam] = useState(TEAMS[2]); // todo: default to team with the lowest members
   const [loading, setLoading] = useState(false);
+  const [selectEnabled, setSelectEnabled] = useState(false);
+
   const { account } = useEthers();
   const info = useAccountInfo();
 
@@ -42,14 +45,10 @@ export default function ClaimNFT({
 
   return (
     <Box className="ClaimNFT" fluid direction="vertical">
-      <Box fluid mb="16px">
+      <Box w="100%" mb="16px" justify="space-between">
         <Box direction="vertical" fluid>
-          <Text mb={0}>Select your team</Text>
-          <Box align="center">
-            <Label m={0} as="p" size="small">
-              Once chosen forever bound
-            </Label>
-          </Box>
+          <Label as="p" m={0} className="uppercase">Select your team</Label>
+          <Label as="p" m={0} className="uppercase fg-zinc500">Once chosen, forever bound</Label>
         </Box>
         <Box>
           {account ? (
@@ -57,27 +56,15 @@ export default function ClaimNFT({
               <Button label="Loading wallet status" disabled={true} />
             ) : accountBalance.gt(0) ? (
               <Button label="Already claimed" disabled={true} />
+            ) : selectEnabled ? (
+              <Button
+                label={`Join ${team.label}`}
+                onClick={handleRedeem}
+                loading={loading}
+                className="button--black"
+              />
             ) : (
-              <Box align="center">
-                <Button
-                  label="Mint Ticket"
-                  onClick={handleRedeem}
-                  loading={loading}
-                />
-                <Label
-                  as="p"
-                  ml="16px"
-                  mb={0}
-                  className={info.checkIsMember ? "crossout" : ""}
-                >
-                  Ξ 0.01 Mint Fee
-                </Label>
-                {info.checkIsMember && (
-                  <Label as="p" ml="16px" mb={0} color="green500">
-                    😊 Free
-                  </Label>
-                )}
-              </Box>
+              <Button label="Select a Team" onClick={() => setSelectEnabled(true)} />
             )
           ) : (
             <ConnectButton label="Connet Wallet to Redeem" />
@@ -85,38 +72,21 @@ export default function ClaimNFT({
         </Box>
       </Box>
       <Box fluid>
-        <div className="ClaimNFT__team ClaimNFT__team--cyan">
-          <Text>Cyan</Text>
-          <Text>
-            Team of 48
-            <br />
-            69,420 Points
-          </Text>
-        </div>
-        <div className="ClaimNFT__team ClaimNFT__team--magenta">
-          <Text>Magenta</Text>
-          <Text>
-            Team of 48
-            <br />
-            69,420 Points
-          </Text>
-        </div>
-        <div className="ClaimNFT__team ClaimNFT__team--yellow">
-          <Text>Yellow</Text>
-          <Text>
-            Team of 48
-            <br />
-            69,420 Points
-          </Text>
-        </div>
-        <div className="ClaimNFT__team ClaimNFT__team--black">
-          <Text>Black</Text>
-          <Text>
-            Team of 48
-            <br />
-            69,420 Points
-          </Text>
-        </div>
+        {TEAMS.map(({ id, key, label }) => (
+          <div
+            onClick={() => setTeam(TEAMS[id])}
+            className={cn(`ClaimNFT__team ClaimNFT__team--${key}`, {
+              "unselected": selectEnabled && team.id !== id
+            })
+          }>
+            <Text>{label}</Text>
+            <Text>
+              Team of 48
+              <br />
+              69,420 Points
+            </Text>
+          </div>
+        ))}
       </Box>
     </Box>
   );

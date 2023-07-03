@@ -7,6 +7,10 @@
 
 body {
   background: white;
+
+  .fg-zinc500 {
+    color: #71717a !important;
+  }
 }
 
 ul {
@@ -17,6 +21,10 @@ ul {
     font-size: 12px;
     line-height: 16px;
   }
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .layout {
@@ -44,6 +52,11 @@ ul {
 
   &:active {
     border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  &--black {
+    color: white !important;
+    background: #27272A !important;
   }
 
   &--primary {
