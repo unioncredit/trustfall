@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import {ERC1155} from "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Votes.sol";
 
 interface ITrustfall {
     function isValid(address, uint256) external view returns (bool);
@@ -10,45 +12,85 @@ interface ITrustfall {
 
 /// @title CMYK
 /// @author @unioncredit
-contract CMYK is ERC1155, Ownable {
+contract CMYK is ERC721Votes, Ownable {
     /* ---------------------------------------------
      Storage
     ----------------------------------------------- */
 
     /// @dev Token IDs
-    uint256 public constant CYAN = 0;
-    uint256 public constant MAGENTA = 1;
-    uint256 public constant YELLOW = 2;
-    uint256 public constant BLACK = 3;
+    enum Team {
+        CYAN,
+        MAGENTA,
+        YELLOW,
+        BLACK
+    }
+
+    /// @dev Tracked token ID
+    uint256 public id;
+
+    /// @dev The merkle root
+    bytes32 public root;
 
     /// @dev The trustfall contract address
     address public trustfall;
 
     /// @dev Mapping of address to claimed
-    mapping(address => bool) public claimed;
+    mapping(address => bool) public hasClaimed;
+
+    /// @dev Team to token URI string
+    mapping(Team => string) public getURI;
+
+    /// @dev Token ID to team
+    mapping(uint256 => Team) public getTokenTeam;
 
     /* ---------------------------------------------
      Constructor 
     ----------------------------------------------- */
 
+    /// @param _owner The owner
     /// @param _trustfall The trustfall contract
-    /// @param uri The token URI string
+    /// @param _name Token name
+    /// @param _symbol Token symbol
     constructor(
-        address owner,
+        address _owner,
         address _trustfall,
-        string memory uri
-    ) ERC1155(uri) Ownable(owner) {
+        string memory _name,
+        string memory _symbol
+    ) ERC721(_name, _symbol) EIP712(_name, "1") Ownable(_owner) {
         trustfall = _trustfall;
+    }
+
+    /* ---------------------------------------------
+      View Functions 
+    ----------------------------------------------- */
+
+    /// @dev Get the token URI
+    /// @param tokenId The token ID
+    /// @return token URI string
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        override
+        returns (string memory)
+    {
+        Team team = getTokenTeam[tokenId];
+        return getURI[team];
     }
 
     /* ---------------------------------------------
       Setter Functions 
     ----------------------------------------------- */
 
+    /// @dev Set the root
+    /// @param _root The root
+    function setRoot(bytes32 _root) external onlyOwner {
+        root = _root;
+    }
+
     /// @dev Set the token URI
     /// @param str The new token URI e.g ipfs://0000/{id}.json
-    function setURI(string memory str) external onlyOwner {
-        _setURI(str);
+    function setURI(Team team, string memory str) external onlyOwner {
+        getURI[team] = str;
     }
 
     /// @dev Set trustfall address, trustfall is used to verify mints
@@ -63,19 +105,29 @@ contract CMYK is ERC1155, Ownable {
 
     /// @dev Mint tokens for addresses in the merkle root.
     /// @dev Only one token per address is allowed to be minted
-    function mint(uint256 id, address to) external payable {
-        require(!claimed[to], "claimed");
+    function mint(
+        Team team,
+        address to,
+        bytes32[] memory proof
+    ) external payable {
+        require(!hasClaimed[to], "claimed");
+
+        bool validProof = MerkleProof.verify(
+            proof,
+            root,
+            keccak256(abi.encodePacked(to))
+        );
 
         bool validTrustfall = ITrustfall(trustfall).isValid(
             msg.sender,
             msg.value
         );
 
-        require(validTrustfall, "!trustfall");
+        require(validTrustfall || validProof, "!valid");
 
-        claimed[to] = true;
+        hasClaimed[to] = true;
 
-        _mint(to, id, 1, "");
+        _mint(to, ++id);
     }
 
     /// @dev Drain ETH
