@@ -2,7 +2,8 @@ import "./Leaderboard.scss";
 
 import { useState } from "react";
 import { useEthers } from "@usedapp/core";
-import { Text, Grid, Box, Heading } from "@unioncredit/ui";
+import { default as cn } from "classnames";
+import { Text, Grid, Box, Heading, Button } from "@unioncredit/ui";
 
 import ClaimNFT from "components/ClaimNFT";
 import Table from "components/Table";
@@ -11,9 +12,12 @@ import MyStats from "components/MyStats";
 import useTokenHolders from "hooks/useTokenHolders";
 import Share from "components/Share";
 import { Link } from "react-router-dom";
+import TeamStats from "components/TeamStats";
 
 function Leaderboard() {
+  const [view, setView] = useState("pvp"); // pvp, teams
   const [showShare, setShowShare] = useState(false);
+
   const { account } = useEthers();
   const { data: holders, refresh } = useTokenHolders();
   const { value: balances } = useNFTCall(
@@ -50,11 +54,28 @@ function Leaderboard() {
       <Grid.Row>
         <Grid.Col>
           <Box fluid mt="48px" direction="vertical">
-            <Box mb="16px">
-              <Heading className="Leaderboard__heading">Leaderboard</Heading>
+            <Box mb="16px" justify="space-between" align="center" fluid>
+              <Heading m={0} className="Leaderboard__heading">Leaderboard</Heading>
+
+              <Box className="Leaderboard__controls">
+                <Button
+                  label="PVP"
+                  onClick={() => setView("pvp")}
+                  className={cn({"active": view === "pvp"})}
+                />
+                <Button
+                  label="Teams"
+                  onClick={() => setView("teams")}
+                  className={cn({"active": view === "teams"})}
+                />
+              </Box>
             </Box>
 
-            <Table data={holders} />
+            {view === "pvp" ? (
+              <Table data={holders} />
+            ) : (
+              <TeamStats />
+            )}
           </Box>
         </Grid.Col>
       </Grid.Row>
