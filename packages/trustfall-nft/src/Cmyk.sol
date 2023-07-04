@@ -125,9 +125,11 @@ contract CMYK is ERC721Votes, Ownable {
 
         require(validTrustfall || validProof, "!valid");
 
+        uint256 tokenId = ++id;
         hasClaimed[to] = true;
+        getTokenTeam[tokenId] = team;
 
-        _mint(to, ++id);
+        _mint(to, tokenId);
     }
 
     /// @dev Drain ETH
