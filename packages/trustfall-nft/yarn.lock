@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@openzeppelin/contracts-upgradeable@^4.9.2":
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts-upgradeable/-/contracts-upgradeable-4.9.2.tgz#a817c75688f8daede420052fbcb34e52482e769e"
+  integrity sha512-siviV3PZV/fHfPaoIC51rf1Jb6iElkYWnNYZ0leO23/ukXuvOyoC/ahy8jqiV7g+++9Nuo3n/rk5ajSN/+d/Sg==
+
 "@solidity-parser/parser@^0.14.3":
   version "0.14.3"
   resolved "https://registry.yarnpkg.com/@solidity-parser/parser/-/parser-0.14.3.tgz#0d627427b35a40d8521aaa933cc3df7d07bfa36f"
