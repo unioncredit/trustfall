@@ -17,12 +17,17 @@ contract TestCmyk is Test {
     uint256 public constant MINT_COST = 0.01 ether;
 
     function setUp() public {
-        cmyk = new CMYK(address(this), "Cmyk", "CMYK", "Cyan");
+        cmyk = new CMYK();
+        cmyk.__CMYK_init("Cmyk", "CMYK", "Cyan");
+
         address userManager = address(new FakeUserManager());
         address trustfall = address(
-            new Trustfall(address(this), address(cmyk), MINT_COST, userManager)
+            new Trustfall(address(this), MINT_COST, userManager)
         );
+
         cmyk.setTrustfall(trustfall);
+
+        Trustfall(trustfall).setIsCmyk(address(cmyk), true);
     }
 
     function testMint() public {

@@ -78,5 +78,7 @@ contract Trustfall is Ownable {
         bool isEnough = value >= mintCost;
 
         require(validProof || isEnough || isMember, "!valid");
+
+        hasClaimed[to] = true;
     }
 }

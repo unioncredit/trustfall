@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721Votes.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721VotesUpgradeable.sol";
 
 interface ITrustfall {
     function performTrustfall(
@@ -39,19 +39,17 @@ contract CMYK is ERC721VotesUpgradeable, OwnableUpgradeable {
      Constructor 
     ----------------------------------------------- */
 
-    /// @param _owner The owner
     /// @param _name Token name
     /// @param _symbol Token symbol
     /// @param _team Team name
     function __CMYK_init(
-        address _owner,
         string memory _name,
         string memory _symbol,
         string memory _team
     ) public initializer {
         team = _team;
 
-        __Ownable_init(_owner);
+        __Ownable_init();
         __ERC721Votes_init();
         __ERC721_init(_name, _symbol);
         __Votes_init();
@@ -110,4 +108,6 @@ contract CMYK is ERC721VotesUpgradeable, OwnableUpgradeable {
     function _beforeTokenTransfer() external payable {}
 
     fallback() external payable {}
+
+    receive() external payable {}
 }
