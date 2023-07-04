@@ -105,7 +105,14 @@ contract CMYK is ERC721VotesUpgradeable, OwnableUpgradeable {
         to.transfer(amount);
     }
 
-    function _beforeTokenTransfer() external payable {}
+    function _beforeTokenTransfer(
+        address from,
+        address to,
+        uint256 firstTokenId,
+        uint256 batchSize
+    ) internal override {
+        require(false, "!transfer");
+    }
 
     fallback() external payable {}
 
