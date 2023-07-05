@@ -1,6 +1,6 @@
 import { utils } from "ethers";
 import { Contract } from "@ethersproject/contracts";
-import { Arbitrum, Kovan, useCalls, useEthers } from "@usedapp/core";
+import { Optimism, useCalls, useEthers } from "@usedapp/core";
 
 import UserManagerABI from "abis/userManager.json";
 import useChainId from "./useChainId";
@@ -8,8 +8,7 @@ import useChainId from "./useChainId";
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 export const userManagerAddress = {
-  [Kovan.chainId]: "0x391fDb669462FBAA5a7e228f3857281BeCf235EE",
-  [Arbitrum.chainId]: "0xb71F3D4342AaE0b8D531E14D2CF2F45d6e458A5F",
+  [Optimism.chainId]: "0x8E195D65b9932185Fcc76dB5144534e0f3597628",
 };
 
 const userManagerIft = new utils.Interface(UserManagerABI);
@@ -31,17 +30,7 @@ export default function useAccountInfo() {
     },
     {
       contract: attachedUserManager,
-      method: "getBorrowerAddresses",
-      args: [account],
-    },
-    {
-      contract: attachedUserManager,
       method: "getStakerBalance",
-      args: [account],
-    },
-    {
-      contract: attachedUserManager,
-      method: "getTotalFrozenAmount",
       args: [account],
     },
     {

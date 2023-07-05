@@ -7,12 +7,13 @@ import { Text, Grid, Box, Heading, Button } from "@unioncredit/ui";
 
 import ClaimNFT from "components/ClaimNFT";
 import Table from "components/Table";
-import { useNFTCall } from "hooks/useNFT";
+import { useTeamCall } from "hooks/useTeam";
 import MyStats from "components/MyStats";
 import useTokenHolders from "hooks/useTokenHolders";
 import Share from "components/Share";
 import { Link } from "react-router-dom";
 import TeamStats from "components/TeamStats";
+import useTeamAddresses from "../hooks/useTeamAddresses";
 
 function Leaderboard() {
   const [view, setView] = useState("pvp"); // pvp, teams
@@ -20,10 +21,14 @@ function Leaderboard() {
 
   const { account } = useEthers();
   const { data: holders, refresh } = useTokenHolders();
-  const { value: balances } = useNFTCall(
+  const { value: balances } = useTeamCall(
+    "cyan",
     "balanceOf",
     account ? [account] : null
   );
+
+  const test = useTeamAddresses("cyan");
+  console.log(test);
 
   return (
     <>

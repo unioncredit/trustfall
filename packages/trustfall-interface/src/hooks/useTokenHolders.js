@@ -1,8 +1,7 @@
 import { useEthers } from "@usedapp/core";
-import { BigNumber } from "ethers";
-import { fetchBorrows, config } from "@unioncredit/data";
+import { fetchBorrows, config, fetchBorrowerAddresses, fetchStakerAddresses } from "@unioncredit/data";
 
-import { contract, nftAddress } from "hooks/useNFT";
+import { contract } from "hooks/useTeam";
 import { useEffect, useState } from "react";
 import { userManager, userManagerAddress } from "./useAccountInfo";
 import useChainId from "./useChainId";
@@ -18,7 +17,8 @@ export default function useTokenHolders() {
       config.set("chainId", chainId);
       const borrows = await fetchBorrows();
 
-      const nft = contract.attach(nftAddress[chainId]).connect(library);
+      // fixme: set contract address
+      const nft = contract.attach("0x4a9A809E3Cd30f3325e39EF1Ecd424ae4B7928Fc").connect(library);
       const id = await nft.id();
 
       const um = userManager

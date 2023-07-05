@@ -2839,10 +2839,10 @@
     "@typescript-eslint/types" "5.30.7"
     eslint-visitor-keys "^3.3.0"
 
-"@unioncredit/data@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@unioncredit/data/-/data-1.0.11.tgz#908760630dd8052de3c335dba5aa2ca046f7d8c1"
-  integrity sha512-0055mpUAer3lll26fz7MQsslgs3IHwJcLKTDrIgfjYzuC/d9UOaSCe9veDakj5LsYCSmmZBbrU7vP4ktJMv+4w==
+"@unioncredit/data@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@unioncredit/data/-/data-1.0.18.tgz#ed526159835282452bf280087eb460b3fa468672"
+  integrity sha512-CXz86SQC7vO5WpKKKX9fkzaZKxrIu62oDS98tZkrlBVViO/X+1SgkVQvgPZi/dDQGbLu0VlAnrVhR+ozoFoO8Q==
   dependencies:
     graphql "^16.5.0"
     graphql-request "^4.2.0"

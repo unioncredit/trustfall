@@ -5,7 +5,7 @@ import { useEthers } from "@usedapp/core";
 import { default as cn } from "classnames";
 import { Box, Text, Label, Button } from "@unioncredit/ui";
 
-import useNFT from "hooks/useNFT";
+import useTeam from "hooks/useTeam";
 import useAccountInfo from "hooks/useAccountInfo";
 import ConnectButton from "components/ConnectButton";
 import { TEAMS } from "../constants";
@@ -24,7 +24,7 @@ export default function ClaimNFT({
   const { account } = useEthers();
   const info = useAccountInfo();
 
-  const { send: mint } = useNFT("mint");
+  const { send: mint } = useTeam(team.key, "mint");
 
   const handleRedeem = async () => {
     try {

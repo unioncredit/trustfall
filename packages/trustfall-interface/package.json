@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "@unioncredit/data": "^1.0.11",
+    "@unioncredit/data": "^1.0.18",
     "@unioncredit/ui": "0.2.1-beta.1",
     "@usedapp/core": "^1.1.2",
     "@walletconnect/ethereum-provider": "^2.8.6",
