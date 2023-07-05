@@ -1,8 +1,8 @@
-import { Box, Text, Button, Label, Heading } from "@unioncredit/ui";
-import { ReactComponent as External } from "@unioncredit/ui/lib/icons/externalinline.svg";
+import { Box, Text, Label, Heading } from "@unioncredit/ui";
 import { useEthers } from "@usedapp/core";
 import { formatUnits } from "ethers/lib/utils";
 import useAccountInfo from "hooks/useAccountInfo";
+import { useTeamCall } from "hooks/useTeam";
 import { useMemo } from "react";
 import format from "utils/format";
 
@@ -11,6 +11,36 @@ import "./MyStats.scss";
 export default function MyStats({ data }) {
   const { account } = useEthers();
   const results = useAccountInfo();
+  const { value: cyanBalance } = useTeamCall(
+    "cyan",
+    "balanceOf",
+    account ? [account] : null
+  );
+  const { value: magentaBalance } = useTeamCall(
+    "magenta",
+    "balanceOf",
+    account ? [account] : null
+  );
+  const { value: yellowBalance } = useTeamCall(
+    "yellow",
+    "balanceOf",
+    account ? [account] : null
+  );
+  const { value: blackBalance } = useTeamCall(
+    "black",
+    "balanceOf",
+    account ? [account] : null
+  );
+
+  const team = cyanBalance?.[0]?.gt(0)
+    ? "Cyan"
+    : magentaBalance?.[0]?.gt(0)
+    ? "Magenta"
+    : yellowBalance?.[0]?.gt(0)
+    ? "Yellow"
+    : blackBalance?.[0]?.gt(0)
+    ? "Black"
+    : "";
 
   const accountData = useMemo(() => {
     if (!data) return { index: -1 };
@@ -31,7 +61,7 @@ export default function MyStats({ data }) {
     },
     // Second row
     {
-      value: "TODO",
+      value: team,
       label: "Your team",
     },
     {
@@ -49,9 +79,7 @@ export default function MyStats({ data }) {
         className="MyStats__header"
         mb="12px"
       >
-        <Text m={0}>
-          Your position & stats
-        </Text>
+        <Text m={0}>Your position & stats</Text>
       </Box>
       <div className="MyStats__grid">
         {stats.map((stat) => (
