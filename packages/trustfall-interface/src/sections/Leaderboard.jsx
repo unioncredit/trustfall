@@ -50,7 +50,7 @@ function Leaderboard() {
 
   return (
     <>
-      <Grid.Row>
+      <Grid.Row className="HeaderRow">
         <Grid.Col>
           <Text size="small" className="Leaderboard__intro">
             Embrace the thrill of trust-based finance in Trustfall, a game of

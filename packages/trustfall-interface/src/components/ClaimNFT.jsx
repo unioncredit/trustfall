@@ -81,7 +81,7 @@ export default function ClaimNFT({
           )}
         </Box>
       </Box>
-      <Box fluid>
+      <Box className="ClaimNFT__teams" fluid>
         {TEAMS.map(({ id, key, label }) => (
           <div
             onClick={() => setTeam(TEAMS[id])}
