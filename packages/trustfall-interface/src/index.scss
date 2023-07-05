@@ -1,7 +1,16 @@
 @import "@unioncredit/ui/lib";
 
+@font-face {
+  font-family: "davinci";
+  src: url("fonts/TRJNDaVinci-Display.ttf") format("truetype");
+}
+
 body {
-  background: #1e1e1e;
+  background: white;
+
+  .fg-zinc500 {
+    color: #71717a !important;
+  }
 }
 
 ul {
@@ -12,6 +21,14 @@ ul {
     font-size: 12px;
     line-height: 16px;
   }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.layout {
+  max-width: 1253px;
 }
 
 .crossout {
@@ -25,34 +42,39 @@ ul {
 
 .button {
   min-height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: none !important;
+  color: black !important;
+
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  &--black {
+    color: white !important;
+    background: #27272A !important;
+  }
 
   &--primary {
-    background: #4f46e5 !important;
+    min-height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
     &:hover {
-      background: #6366f1 !important;
+      border: 1px solid rgba(0, 0, 0, 0.4);
     }
 
     &:active {
-      background: #4338ca !important;
+      border: 1px solid rgba(0, 0, 0, 0.4);
     }
   }
 
   &--secondary {
-    background: none;
-    color: white;
-    border: 0px !important;
-
-    &:hover:not(.button--selected) {
-      background: rgba(0, 0, 0, 0.1) !important;
-    }
-
-    &:active:not(.button--selected) {
-      background: rgba(0, 0, 0, 0.2) !important;
-    }
-
     &.button--selected {
-      background: white;
+      background: rgba(0, 0, 0, 0.1) !important;
       color: black;
     }
   }
@@ -77,17 +99,5 @@ ul {
   }
   path {
     stroke: rgba(255, 255, 255, 0.5);
-  }
-}
-
-.modal.card {
-  border-color: #404040;
-  background: #1e1e1e;
-  h1.text {
-    color: white !important;
-  }
-
-  .modalHeaderWrapper {
-    border-color: #404040;
   }
 }

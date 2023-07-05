@@ -1,8 +1,5 @@
 .ClaimNFT {
-  background: #262626;
-  border: 1px solid #404040;
   border-radius: 8px;
-  padding: 16px;
   box-sizing: border-box;
 
   &__header {
@@ -12,7 +9,7 @@
   }
 
   &__highlightedHeader {
-    color: #818cf8 !important;
+    color: black !important;
   }
 
   &__imageContainer {
@@ -22,7 +19,6 @@
 
   &__image {
     position: relative;
-    background: red;
     width: 100%;
     border: solid 1px #525252;
     background: #404040;
@@ -66,7 +62,7 @@
 
   .text,
   .label {
-    color: white;
+    color: black;
   }
 
   li {
@@ -80,6 +76,72 @@
       margin-bottom: 24px;
       margin-right: 0;
       width: 100%;
+    }
+  }
+
+  &__team {
+    width: calc(25% + 6px);
+    background: none;
+    border-radius: 4px;
+    position: relative;
+    margin-right: -8px;
+    padding: 22px 16px;
+    box-sizing: border-box;
+
+    .text {
+      color: inherit;
+    }
+    .text:nth-of-type(1) {
+      font-size: 32px;
+      font-style: italic;
+      margin-bottom: 16px;
+      font-family: davinci;
+    }
+    .text:nth-of-type(2) {
+      font-size: 12px;
+      line-height: unset;
+      margin: 0;
+    }
+
+    &.unselected {
+      cursor: pointer;
+    }
+
+    &--cyan {
+      color: #2ea000;
+      background: #00d1ff;
+
+      &.unselected {
+        color: #606060;
+        background: #979797;
+      }
+    }
+    &--magenta {
+      color: #1a00ff;
+      background: #fa00ff;
+
+      &.unselected {
+        color: #1C1C1C;
+        background: #676767;
+      }
+    }
+    &--yellow {
+      color: #f53202;
+      background: #ffc700;
+
+      &.unselected {
+        color: #1C1C1C;
+        background: #4f4e4e;
+      }
+    }
+    &--black {
+      color: white;
+      background: black;
+
+      &.unselected {
+        color: #1C1C1C;
+        background: #444;
+      }
     }
   }
 }

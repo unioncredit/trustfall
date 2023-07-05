@@ -1,0 +1,40 @@
+.Leaderboard {
+  &__intro {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: #27272A;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__heading {
+    font-family: "davinci";
+    font-size: 32px !important;
+  }
+
+  &__controls {
+    button {
+      padding: 0;
+      border: none !important;
+      margin-left: 16px;
+      text-transform: uppercase;
+      color: #A1A1AA !important;
+
+      &.active {
+        color: #27272A !important;
+        text-decoration: underline;
+      }
+    }
+  }
+}

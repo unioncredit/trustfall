@@ -1,57 +1,30 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEthers } from "@usedapp/core";
-import { Box, Button } from "@unioncredit/ui";
-import { ReactComponent as External } from "@unioncredit/ui/lib/icons/externalinline.svg";
+import { Box } from "@unioncredit/ui";
 
 import ConnectButton from "components/ConnectButton";
 
 import "./Navigation.scss";
 
 export default function Navigation() {
-  const location = useLocation();
   const { account } = useEthers();
 
   return (
-    <Box fluid mb="18px" className="Navigation">
-      <Box className="Navigation__items">
-        <Button
-          mr="4px"
-          as={Link}
-          to="/"
-          className={location.pathname === "/" ? "button--selected" : ""}
-          label="Leaderboard"
-          variant="secondary"
-        />
-        <Button
-          mr="4px"
-          as={Link}
-          to="/rules"
-          className={
-            location.pathname.includes("rules") ? "button--selected" : ""
-          }
-          label="Game Rules"
-          variant="secondary"
-        />
-        <Button
-          mr="4px"
-          as="a"
-          target="_blank"
-          href="https://guild.xyz/trustfall-players-lobby"
-          className="discordButton"
-          label="Secret Telegram"
-          iconPosition="end"
-          icon={External}
-          variant="secondary"
-        />
+    <Box fluid m="24px 0 56px" className="Navigation">
+      <Box>
+        <Link to="/">
+          <img className="logo" src="/trustfall-logo.svg" alt="a group of people catching a falling person" />
+        </Link>
       </Box>
+
       <Box ml="auto" className="Navigation__action">
-        {account ? (
+        {account && (
           <div className="Navigation__accountButton">
             {account.slice(0, 6)}...{account.slice(-4)}
           </div>
-        ) : (
-          <ConnectButton label="Connect" />
         )}
+
+        <ConnectButton label="Connect Wallet" />
       </Box>
     </Box>
   );

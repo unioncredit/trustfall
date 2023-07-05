@@ -1,0 +1,8 @@
+body .ConnectButton {
+  margin-left: 4px;
+
+  &:not(.ConnectButton--connected) {
+    color: white !important;
+    background: #27272A !important;
+  }
+}

@@ -2,6 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import {MerkleProof} from "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
 interface IUserManager {
     function checkIsMember(address) external view returns (bool);
@@ -15,38 +16,69 @@ contract Trustfall is Ownable {
      Storage
     ----------------------------------------------- */
 
-    address public userManager;
+    address public immutable userManager;
+
+    bytes32 public root;
 
     uint256 public mintCost;
+
+    mapping(address => bool) public hasClaimed;
+
+    mapping(address => bool) public isCmyk;
 
     /* ---------------------------------------------
      Constructor 
     ----------------------------------------------- */
 
     constructor(
-        address owner,
+        address _owner,
         uint256 _mintCost,
         address _userManager
-    ) Ownable(owner) {
+    ) Ownable(_owner) {
         userManager = _userManager;
         mintCost = _mintCost;
+    }
+
+    /* ---------------------------------------------
+     Setter Functions 
+    ----------------------------------------------- */
+
+    function setRoot(bytes32 _root) external onlyOwner {
+        root = _root;
+    }
+
+    function setMintCost(uint256 _mintCost) external onlyOwner {
+        mintCost = _mintCost;
+    }
+
+    function setIsCmyk(address _addr, bool _active) external onlyOwner {
+        isCmyk[_addr] = _active;
     }
 
     /* ---------------------------------------------
      Core Functions 
     ----------------------------------------------- */
 
-    function setMintCost(uint256 _mintCost) external onlyOwner {
-        mintCost = _mintCost;
-    }
+    function performTrustfall(
+        address to,
+        uint256 value,
+        bytes32[] memory proof
+    ) external {
+        require(!hasClaimed[to], "claimed");
+        require(isCmyk[msg.sender], "!cmyk");
 
-    function isValid(address sender, uint256 value)
-        external
-        view
-        returns (bool)
-    {
-        bool isMember = IUserManager(userManager).checkIsMember(sender);
+        bool validProof = MerkleProof.verify(
+            proof,
+            root,
+            keccak256(abi.encodePacked(to))
+        );
+
+        bool isMember = IUserManager(userManager).checkIsMember(to);
+
         bool isEnough = value >= mintCost;
-        return isEnough || isMember;
+
+        require(validProof || isEnough || isMember, "!valid");
+
+        hasClaimed[to] = true;
     }
 }

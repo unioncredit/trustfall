@@ -23,7 +23,7 @@ export function getPairTotals(rows) {
 export default function getScore(vouches, pairTotals, threshold = 1) {
   let tot = 0;
 
-  for (const [s1, v1] of vouches) {
+  for (const [s1, v1] of vouches) { // staker addr, vouch
     for (const [s2, v2] of vouches) {
       const nv1 = Number(formatUnits(v1));
       const nv2 = Number(formatUnits(v2));

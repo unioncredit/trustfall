@@ -1,11 +1,9 @@
 import {
   Table as UITable,
-  TableRow as UITableRow,
-  TableCell,
   LoadingSpinner,
   Box,
+  Text,
 } from "@unioncredit/ui";
-import TableRow from "./TableRow";
 
 import "./Table.scss";
 
@@ -24,17 +22,7 @@ export default function Table({ data }) {
 
   return (
     <div className="tableWrapper">
-      <UITable>
-        <UITableRow>
-          <TableCell fixedSize></TableCell>
-          <TableCell fixedSize></TableCell>
-          <TableCell>Account</TableCell>
-          <TableCell align="right">Originations</TableCell>
-        </UITableRow>
-        {data.map((row, i) => (
-          <TableRow {...row} index={i} key={row.member} />
-        ))}
-      </UITable>
+      <Text m={0}>Mint phase, please check back shortly for rankings</Text>
     </div>
   );
 }
