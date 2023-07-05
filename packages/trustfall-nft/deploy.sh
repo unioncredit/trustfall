@@ -3,7 +3,7 @@ trustfall=$(forge create \
   --private-key $PRIVATE_KEY \
   --json \
   src/Trustfall.sol:Trustfall \
-  --constructor-args "$(cast wallet address --private-key $PRIVATE_KEY)" "10000000000000000" "$USER_MANAGER" | jq .deployedTo | tr -d '"')
+  --constructor-args "$(cast wallet address --private-key $PRIVATE_KEY)" "1000000000000000" "$USER_MANAGER" | jq .deployedTo | tr -d '"')
 
 echo "Trustfall.sol: $trustfall";
 
@@ -80,25 +80,41 @@ echo "Black: $black";
 cast send \
   --rpc-url $NODE_URL \
   --private-key $PRIVATE_KEY \
-  $yellow \
+  $black \
   "__CMYK_init(string,string,string)" \
   "Trustfall CMYK Black" "cmykBLACK" "Black"
+  
+####################################################
+#    SETUP 
+####################################################
 
-cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY \
-  $trustfall "setIsCmyk(address,bool)" $cyan true
+cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY $trustfall "setIsCmyk(address,bool)" $cyan true
+cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY $trustfall "setIsCmyk(address,bool)" $magenta true
+cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY $trustfall "setIsCmyk(address,bool)" $yellow true
+cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY $trustfall "setIsCmyk(address,bool)" $black true
 
-cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY \
-  $trustfall "setIsCmyk(address,bool)" $magenta true
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $cyan "setTrustfall(address)" $trustfall 
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $magenta "setTrustfall(address)" $trustfall 
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $yellow "setTrustfall(address)" $trustfall 
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $black "setTrustfall(address)" $trustfall 
 
-cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY \
-  $trustfall "setIsCmyk(address,bool)" $yellow true
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $cyan "setURI(string)" "ipfs://QmTwE7aD1hgndwoTXLBqyiUUbmsvsTw4Tq3J9oHQDNHijW"
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $magenta "setURI(string)" "ipfs:/QmUXPg3Q3RJ1fbiqdXBRx4wzo5vKgofu7EDik8nHSQkKhA" 
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $yellow "setURI(string)" "ipfs://QmTc6sikdJSiMUuxJUvcyK7Prae3zA8b9vHNUME1kk9VhZ"
+cast send --private-key $PRIVATE_KEY --rpc-url $NODE_URL $black "setURI(string)" "ipfs://QmQuKpvAUiMU8CEuJEjzKVG5HKUabMdptjtifxKhwy1V6V"
 
-cast send --rpc-url $NODE_URL --private-key $PRIVATE_KEY \
-  $trustfall "setIsCmyk(address,bool)" $black true
+####################################################
+#   OUTPUT 
+####################################################
 
-
-echo $trustfall;
-echo $cyan;
-echo $magenta;
-echo $yellow;
-echo $black;
+echo "";
+echo "Deployment complete:";
+echo "";
+echo "Trustfall: $trustfall";
+echo "";
+echo "Team NFTS";
+echo "Cyan: $cyan";
+echo "Magenta: $magenta";
+echo "Yellow: $yellow";
+echo "Black: $black";
+echo "";

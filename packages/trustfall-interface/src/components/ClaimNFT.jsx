@@ -30,8 +30,8 @@ export default function ClaimNFT({
     try {
       setLoading(true);
       const resp = await mint(
-        [],
         account,
+        [],
         info.checkIsMember ? {} : { value: mintCost }
       );
       if (resp) setShowShare(true);
@@ -47,8 +47,12 @@ export default function ClaimNFT({
     <Box className="ClaimNFT" fluid direction="vertical">
       <Box w="100%" mb="16px" justify="space-between">
         <Box direction="vertical" fluid>
-          <Label as="p" m={0} className="uppercase">Select your team</Label>
-          <Label as="p" m={0} className="uppercase fg-zinc500">Once chosen, forever bound</Label>
+          <Label as="p" m={0} className="uppercase">
+            Select your team
+          </Label>
+          <Label as="p" m={0} className="uppercase fg-zinc500">
+            Once chosen, forever bound
+          </Label>
         </Box>
         <Box>
           {account ? (
@@ -64,7 +68,10 @@ export default function ClaimNFT({
                 className="button--black"
               />
             ) : (
-              <Button label="Select a Team" onClick={() => setSelectEnabled(true)} />
+              <Button
+                label="Select a Team"
+                onClick={() => setSelectEnabled(true)}
+              />
             )
           ) : (
             <ConnectButton label="Connet Wallet to Redeem" />
@@ -76,9 +83,9 @@ export default function ClaimNFT({
           <div
             onClick={() => setTeam(TEAMS[id])}
             className={cn(`ClaimNFT__team ClaimNFT__team--${key}`, {
-              "unselected": selectEnabled && team.id !== id
-            })
-          }>
+              unselected: selectEnabled && team.id !== id,
+            })}
+          >
             <Text>{label}</Text>
             <Text>
               Team of 48

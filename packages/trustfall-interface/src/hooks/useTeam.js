@@ -18,7 +18,7 @@ export const contract = new Contract(ZERO_ADDRESS, itf);
 export default function useTeam(teamKey, ...args) {
   const { chainId } = useEthers();
   const { address } = getTeam(teamKey);
-
+  
   return useContractFunction(
     chainId && address && contract.attach(address),
     ...args

@@ -3,25 +3,25 @@ export const TEAMS = [
     id: 0,
     key: "cyan",
     label: "Cyan",
-    address: "0x4a9A809E3Cd30f3325e39EF1Ecd424ae4B7928Fc",
+    address: "0x7D39acf26c039A02B64C26B45e82543A4dF297a9",
   },
   {
     id: 1,
     key: "magenta",
     label: "Magenta",
-    address: "0xb68891A0eAe80A9eBfdd79Cbb24d249A790C55a5",
+    address: "0x9Ab91AD3a5310c250cFBBc73f49554F397717Cd3",
   },
   {
     id: 2,
     key: "yellow",
     label: "Yellow",
-    address: "0x18567bB725511a7eF9468BF4A30CcaEaA89913F5",
+    address: "0xA4518468e104285CE41366e8bA2fd32dF9021419",
   },
   {
     id: 3,
     key: "black",
     label: "Black",
-    address: "0x62d4920eDe36756Bb0703D7679D01c645016bA86",
+    address: "0x049E6474B85e42832e8E1F04F52DFbDad254c1f6",
   },
 ];
 
@@ -31,3 +31,4 @@ export const TEAM_IDS = {
   YELLOW: 2,
   BLACK: 3,
 };
+
