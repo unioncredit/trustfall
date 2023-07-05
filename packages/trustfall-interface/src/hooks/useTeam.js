@@ -48,9 +48,9 @@ export function useTeamCalls(teamKey, calls) {
   const { chainId } = useEthers();
   const { address } = getTeam(teamKey);
 
-  return useCalls(chainId && contract && address && calls.map(({ method, args }) => ({
+  return useCalls(chainId && contract && address && calls && calls.length > 0 ? calls.map(({ method, args }) => ({
     contract: contract.attach(address),
     method,
     args,
-  })))
+  })) : [])
 }

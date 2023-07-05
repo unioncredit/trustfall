@@ -4,9 +4,9 @@ export default function useTeamAddresses(teamKey) {
   const { value } = useTeamCall(teamKey, "id", []);
 
   const calls = [];
-  const count = Math.max(0, value ? value - 1 : 0);
+  const count = Math.max(0, value ? Number(value[0]) : 0);
 
-  for (let i = 0; i < count; i++) {
+  for (let i = 1; i <= count; i++) {
     calls.push({
       method: "ownerOf",
       args: [i],
@@ -14,9 +14,10 @@ export default function useTeamAddresses(teamKey) {
   }
 
   const results = useTeamCalls(teamKey, calls);
+  const addresses = results.filter(r => r?.value).map((result) => result && result.value[0]);
 
   return {
-    count,
-    addresses: results.map(({ value }) => value)
+    addresses,
+    count: addresses.length,
   }
 }

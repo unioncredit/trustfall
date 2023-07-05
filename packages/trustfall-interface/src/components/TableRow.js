@@ -17,42 +17,23 @@ import Avatar from "components/Avatar";
 
 import "./Table.scss";
 import format from "utils/format";
+import { getTeam } from "utils/teams";
 
 const team = [];
 
-export default function TableRow({ team, address, isMember, fees, index: i }) {
+export default function TableRow({ index, address, team: teamKey, borrow, credit, score, stake, vouch }) {
   const ens = useENS(address);
   const { chainId } = useEthers();
 
+  const team = getTeam(teamKey);
+
   return (
     <UITableRow>
-      <TableCell fixedSize>{i + 1}</TableCell>
+      <TableCell fixedSize>{index + 1}</TableCell>
       <TableCell fixedSize className="avatarCell">
         <Avatar address={address} size={24} ens={ens} />
         <span className="isMember">
-          {isMember ? (
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7Z"
-                fill="#D1FAE5"
-              />
-              <path
-                d="M4.5 7.5L6 9L9.5 5.5"
-                stroke="#10B981"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          ) : (
-            <span></span>
-          )}
+          <span></span>
         </span>
       </TableCell>
       <TableCell>
@@ -69,10 +50,10 @@ export default function TableRow({ team, address, isMember, fees, index: i }) {
         </Box>
       </TableCell>
       <TableCell align="right">
-        {format(Number(formatUnits(fees.toString())), 2)}
+        {format(Number(formatUnits(vouch)), 2)}
       </TableCell>
       <TableCell align="right">
-        {format(Number(formatUnits(fees.toString())), 2)}
+        {format(Number(formatUnits(score)), 2)}
       </TableCell>
     </UITableRow>
   );

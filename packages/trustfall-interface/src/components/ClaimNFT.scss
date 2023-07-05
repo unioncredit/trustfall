@@ -79,6 +79,12 @@
     }
   }
 
+  &__teams {
+    @media (max-width: 610px) {
+      flex-wrap: wrap;
+    }
+  }
+
   &__team {
     width: calc(25% + 6px);
     background: none;
@@ -87,6 +93,10 @@
     margin-right: -8px;
     padding: 22px 16px;
     box-sizing: border-box;
+
+    @media (max-width: 610px) {
+      width: calc(50% + 6px);
+    }
 
     .text {
       color: inherit;

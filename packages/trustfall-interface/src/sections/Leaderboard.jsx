@@ -9,19 +9,16 @@ import ClaimNFT from "components/ClaimNFT";
 import Table from "components/Table";
 import { useTeamCall } from "hooks/useTeam";
 import MyStats from "components/MyStats";
-import useTokenHolders from "hooks/useTokenHolders";
 import Share from "components/Share";
-import { Link } from "react-router-dom";
 import TeamStats from "components/TeamStats";
-import useTeamAddresses from "../hooks/useTeamAddresses";
 import { BigNumber } from "ethers";
+import useGameStats from "../hooks/useGameStats";
 
 function Leaderboard() {
   const [view, setView] = useState("pvp"); // pvp, teams
   const [showShare, setShowShare] = useState(false);
 
   const { account } = useEthers();
-  const { data: holders, refresh } = useTokenHolders();
   const { value: cyanBalance } = useTeamCall(
     "cyan",
     "balanceOf",
@@ -49,12 +46,11 @@ function Leaderboard() {
       ?.add(yellowBalance?.[0] || BigNumber.from(0))
       ?.add(blackBalance?.[0] || BigNumber.from(0)) || BigNumber.from(0);
 
-  // const test = useTeamAddresses("cyan");
-  // console.log(test);
+  const data = useGameStats();
 
   return (
     <>
-      <Grid.Row>
+      <Grid.Row className="HeaderRow">
         <Grid.Col>
           <Text size="small" className="Leaderboard__intro">
             Embrace the thrill of trust-based finance in Trustfall, a game of
@@ -84,10 +80,10 @@ function Leaderboard() {
         <Grid.Col>
           {account &&
             (balances.gt(0) ? (
-              <MyStats data={holders} />
+              <MyStats data={data} />
             ) : (
               <ClaimNFT
-                refreshData={refresh}
+                data={data}
                 accountBalance={balances}
                 setShowShare={setShowShare}
               />
@@ -108,15 +104,15 @@ function Leaderboard() {
                   onClick={() => setView("pvp")}
                   className={cn({ active: view === "pvp" })}
                 />
-                <Button
-                  label="Teams"
-                  // onClick={() => setView("teams")}
-                  className={cn({ active: view === "teams" })}
-                />
+                {/*<Button*/}
+                {/*  label="Teams"*/}
+                {/*  onClick={() => setView("teams")}*/}
+                {/*  className={cn({ active: view === "teams" })}*/}
+                {/*/>*/}
               </Box>
             </Box>
 
-            {view === "pvp" ? <Table data={holders} /> : <TeamStats />}
+            {view === "pvp" ? <Table data={data} /> : <TeamStats />}
           </Box>
         </Grid.Col>
       </Grid.Row>

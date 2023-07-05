@@ -9,15 +9,18 @@ import useTeam from "hooks/useTeam";
 import useAccountInfo from "hooks/useAccountInfo";
 import ConnectButton from "components/ConnectButton";
 import { TEAMS } from "../constants";
+import format from "utils/format";
+import { formatUnits } from "ethers/lib/utils";
 
 const mintCost = "1000000000000000"; // 0.01 ETH
 
 export default function ClaimNFT({
+  data,
   setShowShare,
   accountBalance,
   refreshData,
 }) {
-  const [team, setTeam] = useState(TEAMS[2]); // todo: default to team with the lowest members
+  const [team, setTeam] = useState(TEAMS[Math.floor(Math.random() * 4)]);
   const [loading, setLoading] = useState(false);
   const [selectEnabled, setSelectEnabled] = useState(false);
 
@@ -78,7 +81,7 @@ export default function ClaimNFT({
           )}
         </Box>
       </Box>
-      <Box fluid>
+      <Box className="ClaimNFT__teams" fluid>
         {TEAMS.map(({ id, key, label }) => (
           <div
             onClick={() => setTeam(TEAMS[id])}
@@ -88,9 +91,9 @@ export default function ClaimNFT({
           >
             <Text>{label}</Text>
             <Text>
-              Team of 48
+              Team of {data[key].count}
               <br />
-              69,420 Points
+              {format(Number(formatUnits(data[key].totals.score)), 2)} Points
             </Text>
           </div>
         ))}
