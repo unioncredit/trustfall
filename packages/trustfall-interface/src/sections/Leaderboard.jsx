@@ -67,6 +67,7 @@ function Leaderboard() {
             Are you ready to take the fall?
           </Text>
 
+          {/*
           <Box mt="16px">
             <Link to="/rules#howtojoin" className="Leaderboard__link">
               How to join
@@ -78,6 +79,7 @@ function Leaderboard() {
               Prizes
             </Link>
           </Box>
+          */}
         </Grid.Col>
         <Grid.Col>
           {account &&
