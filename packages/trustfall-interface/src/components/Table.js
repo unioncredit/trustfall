@@ -40,7 +40,7 @@ export default function Table({ data }) {
           <TableRow
             {...row}
             index={i}
-            key={row.member}
+            key={row.address}
           />
         ))}
       </UITable>
