@@ -49,8 +49,8 @@ function Leaderboard() {
       ?.add(yellowBalance?.[0] || BigNumber.from(0))
       ?.add(blackBalance?.[0] || BigNumber.from(0)) || BigNumber.from(0);
 
-  const test = useTeamAddresses("cyan");
-  console.log(test);
+  // const test = useTeamAddresses("cyan");
+  // console.log(test);
 
   return (
     <>
@@ -108,7 +108,7 @@ function Leaderboard() {
                 />
                 <Button
                   label="Teams"
-                  onClick={() => setView("teams")}
+                  // onClick={() => setView("teams")}
                   className={cn({ active: view === "teams" })}
                 />
               </Box>
