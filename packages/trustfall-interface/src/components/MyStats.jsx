@@ -1,71 +1,32 @@
 import { Box, Text, Label, Heading } from "@unioncredit/ui";
 import { useEthers } from "@usedapp/core";
 import { formatUnits } from "ethers/lib/utils";
-import useAccountInfo from "hooks/useAccountInfo";
-import { useTeamCall } from "hooks/useTeam";
-import { useMemo } from "react";
 import format from "utils/format";
 
 import "./MyStats.scss";
+import { calculatePosition, getTeam } from "utils/teams";
 
 export default function MyStats({ data }) {
   const { account } = useEthers();
-  const results = useAccountInfo();
-  const { value: cyanBalance } = useTeamCall(
-    "cyan",
-    "balanceOf",
-    account ? [account] : null
-  );
-  const { value: magentaBalance } = useTeamCall(
-    "magenta",
-    "balanceOf",
-    account ? [account] : null
-  );
-  const { value: yellowBalance } = useTeamCall(
-    "yellow",
-    "balanceOf",
-    account ? [account] : null
-  );
-  const { value: blackBalance } = useTeamCall(
-    "black",
-    "balanceOf",
-    account ? [account] : null
-  );
+  const { players } = data;
 
-  const team = cyanBalance?.[0]?.gt(0)
-    ? "Cyan"
-    : magentaBalance?.[0]?.gt(0)
-    ? "Magenta"
-    : yellowBalance?.[0]?.gt(0)
-    ? "Yellow"
-    : blackBalance?.[0]?.gt(0)
-    ? "Black"
-    : "";
-
-  const accountData = useMemo(() => {
-    if (!data) return { index: -1 };
-
-    const index = data.findIndex(
-      (row) => row.address.toLowerCase() === account.toLowerCase()
-    );
-
-    return { index, ...data[index] };
-  }, [account, data]);
+  const player = players.find(p => p.address === account);
+  const team = getTeam(player?.team);
 
   const stats = [
     // First row
-    { value: `#${accountData.index + 1}`, label: `of ${data?.length}` },
+    { value: team ? `#${calculatePosition(team.key, data)}` : "N/A", label: `of 4` },
     {
-      value: format(formatUnits(String(accountData.fees || "0")) || "0", 2),
+      value: format(formatUnits(player?.score || "0"), 2),
       label: "Your score",
     },
     // Second row
     {
-      value: team,
+      value: team?.label || "N/A",
       label: "Your team",
     },
     {
-      value: format(formatUnits(results.getTotalLockedStake || "0"), 2),
+      value: format(formatUnits(player?.vouch || "0"), 2),
       label: "Your total vouch",
     },
   ];

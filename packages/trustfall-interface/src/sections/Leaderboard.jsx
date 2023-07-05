@@ -9,7 +9,6 @@ import ClaimNFT from "components/ClaimNFT";
 import Table from "components/Table";
 import { useTeamCall } from "hooks/useTeam";
 import MyStats from "components/MyStats";
-import useTokenHolders from "hooks/useTokenHolders";
 import Share from "components/Share";
 import TeamStats from "components/TeamStats";
 import { BigNumber } from "ethers";
@@ -20,7 +19,6 @@ function Leaderboard() {
   const [showShare, setShowShare] = useState(false);
 
   const { account } = useEthers();
-  const { data: holders, refresh } = useTokenHolders();
   const { value: cyanBalance } = useTeamCall(
     "cyan",
     "balanceOf",
@@ -82,11 +80,10 @@ function Leaderboard() {
         <Grid.Col>
           {account &&
             (balances.gt(0) ? (
-              <MyStats data={holders} />
+              <MyStats data={data} />
             ) : (
               <ClaimNFT
                 data={data}
-                refreshData={refresh}
                 accountBalance={balances}
                 setShowShare={setShowShare}
               />
@@ -107,11 +104,11 @@ function Leaderboard() {
                   onClick={() => setView("pvp")}
                   className={cn({ active: view === "pvp" })}
                 />
-                <Button
-                  label="Teams"
-                  onClick={() => setView("teams")}
-                  className={cn({ active: view === "teams" })}
-                />
+                {/*<Button*/}
+                {/*  label="Teams"*/}
+                {/*  onClick={() => setView("teams")}*/}
+                {/*  className={cn({ active: view === "teams" })}*/}
+                {/*/>*/}
               </Box>
             </Box>
 
