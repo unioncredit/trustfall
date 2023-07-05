@@ -88,7 +88,7 @@ function Leaderboard() {
             ) : (
               <ClaimNFT
                 refreshData={refresh}
-                accountBalance={balances?.[0]}
+                accountBalance={balances}
                 setShowShare={setShowShare}
               />
             ))}
