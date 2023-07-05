@@ -9,10 +9,13 @@ import useTeam from "hooks/useTeam";
 import useAccountInfo from "hooks/useAccountInfo";
 import ConnectButton from "components/ConnectButton";
 import { TEAMS } from "../constants";
+import format from "utils/format";
+import { formatUnits } from "ethers/lib/utils";
 
 const mintCost = "1000000000000000"; // 0.01 ETH
 
 export default function ClaimNFT({
+  data,
   setShowShare,
   accountBalance,
   refreshData,
@@ -88,9 +91,9 @@ export default function ClaimNFT({
           >
             <Text>{label}</Text>
             <Text>
-              Team of 48
+              Team of {data[key].count}
               <br />
-              69,420 Points
+              {format(Number(formatUnits(data[key].totals.score)), 2)} Points
             </Text>
           </div>
         ))}

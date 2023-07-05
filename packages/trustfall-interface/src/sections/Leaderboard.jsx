@@ -11,11 +11,8 @@ import { useTeamCall } from "hooks/useTeam";
 import MyStats from "components/MyStats";
 import useTokenHolders from "hooks/useTokenHolders";
 import Share from "components/Share";
-import { Link } from "react-router-dom";
 import TeamStats from "components/TeamStats";
-import useTeamAddresses from "../hooks/useTeamAddresses";
 import { BigNumber } from "ethers";
-import useTeamStats from "../hooks/useTeamStats";
 import useGameStats from "../hooks/useGameStats";
 
 function Leaderboard() {
@@ -88,6 +85,7 @@ function Leaderboard() {
               <MyStats data={holders} />
             ) : (
               <ClaimNFT
+                data={data}
                 refreshData={refresh}
                 accountBalance={balances}
                 setShowShare={setShowShare}
