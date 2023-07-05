@@ -10,7 +10,7 @@ import useAccountInfo from "hooks/useAccountInfo";
 import ConnectButton from "components/ConnectButton";
 import { TEAMS } from "../constants";
 
-const mintCost = "10000000000000000"; // 0.01 ETH
+const mintCost = "1000000000000000"; // 0.01 ETH
 
 export default function ClaimNFT({
   setShowShare,
