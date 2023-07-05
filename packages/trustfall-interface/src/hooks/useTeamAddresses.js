@@ -1,4 +1,4 @@
-import useTeam, { useTeamCall, useTeamCalls } from "./useTeam";
+import { useTeamCall, useTeamCalls } from "./useTeam";
 
 export default function useTeamAddresses(teamKey) {
   const { value } = useTeamCall(teamKey, "id", []);
