@@ -1,11 +1,23 @@
 .TeamStats {
   width: calc(100% + 24px) !important;
   margin: 0 -12px;
+  flex-wrap: wrap;
 
   &__team {
     padding: 24px;
     margin-left: 12px;
     margin-right: 12px;
+
+    @media (max-width: 1000px) {
+      margin-top: 0 !important;
+      margin-bottom: 24px;
+      width: calc(50% - 24px) !important;
+      flex-basis: calc(50% - 24px) !important;
+    }
+    @media (max-width: 610px) {
+      width: calc(50% - 24px) !important;
+      flex-basis: calc(100% - 24px) !important;
+    }
 
     h2, p, svg, path {
       color: inherit;
