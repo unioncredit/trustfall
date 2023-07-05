@@ -104,15 +104,15 @@ function Leaderboard() {
                   onClick={() => setView("pvp")}
                   className={cn({ active: view === "pvp" })}
                 />
-                {/*<Button*/}
-                {/*  label="Teams"*/}
-                {/*  onClick={() => setView("teams")}*/}
-                {/*  className={cn({ active: view === "teams" })}*/}
-                {/*/>*/}
+                <Button
+                  label="Teams"
+                  onClick={() => setView("teams")}
+                  className={cn({ active: view === "teams" })}
+                />
               </Box>
             </Box>
 
-            {view === "pvp" ? <Table data={data} /> : <TeamStats />}
+            {view === "pvp" ? <Table data={data} /> : <TeamStats data={data} />}
           </Box>
         </Grid.Col>
       </Grid.Row>
