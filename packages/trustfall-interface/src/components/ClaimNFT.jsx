@@ -20,7 +20,7 @@ export default function ClaimNFT({
   accountBalance,
   refreshData,
 }) {
-  const [team, setTeam] = useState(TEAMS[2]); // todo: default to team with the lowest members
+  const [team, setTeam] = useState(TEAMS[Math.floor(Math.random() * 4)]);
   const [loading, setLoading] = useState(false);
   const [selectEnabled, setSelectEnabled] = useState(false);
 
