@@ -1,11 +1,14 @@
+import "./Table.scss";
+
 import {
   Table as UITable,
+  TableRow as UITableRow,
+  TableCell,
   LoadingSpinner,
   Box,
-  Text,
 } from "@unioncredit/ui";
-
-import "./Table.scss";
+import TableRow from "./TableRow";
+import { TEAMS } from "../constants";
 
 export default function Table({ data }) {
   if (!data) {
@@ -20,9 +23,27 @@ export default function Table({ data }) {
     );
   }
 
+  const { players } = data;
+
   return (
     <div className="tableWrapper">
-      <Text m={0}>Mint phase, please check back shortly for rankings</Text>
+      <UITable>
+        <UITableRow>
+          <TableCell fixedSize></TableCell>
+          <TableCell fixedSize></TableCell>
+          <TableCell>Account</TableCell>
+          <TableCell align="right">Team</TableCell>
+          <TableCell align="right">Vouch Amount</TableCell>
+          <TableCell align="right">Total Score</TableCell>
+        </UITableRow>
+        {players.map((row, i) => (
+          <TableRow
+            {...row}
+            index={i}
+            key={row.member}
+          />
+        ))}
+      </UITable>
     </div>
   );
 }

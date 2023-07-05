@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import TeamStats from "components/TeamStats";
 import useTeamAddresses from "../hooks/useTeamAddresses";
 import { BigNumber } from "ethers";
+import useTeamStats from "../hooks/useTeamStats";
+import useGameStats from "../hooks/useGameStats";
 
 function Leaderboard() {
   const [view, setView] = useState("pvp"); // pvp, teams
@@ -49,8 +51,7 @@ function Leaderboard() {
       ?.add(yellowBalance?.[0] || BigNumber.from(0))
       ?.add(blackBalance?.[0] || BigNumber.from(0)) || BigNumber.from(0);
 
-  // const test = useTeamAddresses("cyan");
-  // console.log(test);
+  const data = useGameStats();
 
   return (
     <>
@@ -110,13 +111,13 @@ function Leaderboard() {
                 />
                 <Button
                   label="Teams"
-                  // onClick={() => setView("teams")}
+                  onClick={() => setView("teams")}
                   className={cn({ active: view === "teams" })}
                 />
               </Box>
             </Box>
 
-            {view === "pvp" ? <Table data={holders} /> : <TeamStats />}
+            {view === "pvp" ? <Table data={data} /> : <TeamStats />}
           </Box>
         </Grid.Col>
       </Grid.Row>
