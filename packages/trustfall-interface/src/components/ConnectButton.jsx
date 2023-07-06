@@ -13,7 +13,7 @@ export default function ConnectButton({ label = "Connect" }) {
   async function activateWalletConnect() {
     const provider = await EthereumProvider.init({
       projectId: "627eff658328606c22dd84f2ed347469",
-      chains: [42161],
+      chains: [10],
       showQrModal: true,
     });
     setOpen(false);
