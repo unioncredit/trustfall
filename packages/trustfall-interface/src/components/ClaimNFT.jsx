@@ -32,8 +32,20 @@ export default function ClaimNFT({
 
   useEffect(() => {
     if (state.status === "Exception") {
-      toast.error(state.errorMessage.includes("insufficient funds") ? "Insufficient funds" : "An error occurred");
-      console.error(state.errorMessage);
+      switch (true) {
+        case state.errorMessage.includes("insufficient funds"):
+          toast.error("Insufficient funds");
+          break;
+
+        case state.errorMessage.includes("User denied transaction signature"):
+          toast.error("User cancelled transaction");
+          break;
+
+        default:
+          toast.error("An error occurred");
+          console.error(state.errorMessage);
+          break;
+      }
     }
   }, [state]);
 
