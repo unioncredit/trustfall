@@ -1,6 +1,6 @@
 import "./ClaimNFT.scss";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useEthers } from "@usedapp/core";
 import { default as cn } from "classnames";
 import { Box, Text, Label, Button } from "@unioncredit/ui";
@@ -11,6 +11,7 @@ import ConnectButton from "components/ConnectButton";
 import { TEAMS } from "../constants";
 import format from "utils/format";
 import { formatUnits } from "ethers/lib/utils";
+import toast from "react-hot-toast";
 
 const mintCost = "1000000000000000"; // 0.01 ETH
 
@@ -27,7 +28,14 @@ export default function ClaimNFT({
   const { account } = useEthers();
   const info = useAccountInfo();
 
-  const { send: mint } = useTeam(team.key, "mint");
+  const { state, send: mint } = useTeam(team.key, "mint");
+
+  useEffect(() => {
+    if (state.status === "Exception") {
+      toast.error(state.errorMessage.includes("insufficient funds") ? "Insufficient funds" : "An error occurred");
+      console.error(state.errorMessage);
+    }
+  }, [state]);
 
   const handleRedeem = async () => {
     try {
@@ -39,6 +47,7 @@ export default function ClaimNFT({
       );
       if (resp) setShowShare(true);
     } catch (e) {
+      console.log("oops!");
       console.log(e);
     } finally {
       setLoading(false);

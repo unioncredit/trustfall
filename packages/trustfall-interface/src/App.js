@@ -5,12 +5,15 @@ import { Grid, Layout, Box, Label, AlertBanner } from "@unioncredit/ui";
 import Navigation from "components/Navigation";
 import Leaderboard from "sections/Leaderboard";
 import GameRules from "sections/GameRules";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const { error } = useEthers();
 
   return (
     <div className="App">
+      <Toaster />
+
       {error && error.message.includes("Unsupported") && (
         <AlertBanner label={error.message} />
       )}
