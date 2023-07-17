@@ -12,7 +12,7 @@ export const config = {
   readOnlyChainId: Optimism.chainId,
   readOnlyUrls: {
     [Optimism.chainId]:
-      "https://optimism-mainnet.infura.io/v3/b3359a5636d64b858b26fc5cccab8578",
+      "https://optimism-mainnet.infura.io/v3/19d3c955dd4e4d3ab5dd5ffed9d756db",
   },
   multicallAddresses: {
     [Optimism.chainId]: "0x142E2FEaC30d7fc3b61f9EE85FCCad8e560154cc",
