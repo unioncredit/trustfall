@@ -1,4 +1,4 @@
-import { Box, Text, Label, Heading } from "@unioncredit/ui";
+import { Box, Text, Label, Heading, Button } from "@unioncredit/ui";
 import { useEthers } from "@usedapp/core";
 import { formatUnits } from "ethers/lib/utils";
 import format from "utils/format";
@@ -41,6 +41,14 @@ export default function MyStats({ data }) {
         mb="12px"
       >
         <Text m={0}>Your position & stats</Text>
+
+        <Button
+          as="a"
+          target="_blank"
+          mr="4px"
+          href="https://guild.xyz/trustfall-players-lobby-d89ba1"
+          label="Enter lobby"
+        />
       </Box>
       <div className="MyStats__grid">
         {stats.map((stat) => (

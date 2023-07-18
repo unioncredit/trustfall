@@ -116,7 +116,7 @@ function Leaderboard() {
           </Box>
         </Grid.Col>
       </Grid.Row>
-      {showShare && <Share onClose={() => setShowShare(false)} />}
+      {showShare && <Share data={data} onClose={() => setShowShare(false)} />}
     </>
   );
 }
