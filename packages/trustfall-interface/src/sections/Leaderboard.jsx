@@ -13,6 +13,7 @@ import Share from "components/Share";
 import TeamStats from "components/TeamStats";
 import { BigNumber } from "ethers";
 import useGameStats from "../hooks/useGameStats";
+import { Link } from "react-router-dom";
 
 function Leaderboard() {
   const [view, setView] = useState("pvp"); // pvp, teams
@@ -63,7 +64,6 @@ function Leaderboard() {
             Are you ready to take the fall?
           </Text>
 
-          {/*
           <Box mt="16px">
             <Link to="/rules#howtojoin" className="Leaderboard__link">
               How to join
@@ -75,7 +75,6 @@ function Leaderboard() {
               Prizes
             </Link>
           </Box>
-          */}
         </Grid.Col>
         <Grid.Col>
           {account &&
