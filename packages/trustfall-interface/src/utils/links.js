@@ -1,5 +1,6 @@
 const urls = {
   1: "https://etherscan.io",
+  10: "https://optimistic.etherscan.io",
   137: "https://polygonscan.com",
   42: "https://kovan.etherscan.io",
   42161: "https://arbiscan.io",
@@ -15,7 +16,7 @@ const urls = {
  *
  * @returns {String}
  */
-export default function getEtherscanLink(networkId, data, type) {
+export function getEtherscanLink(networkId, data, type) {
   let prefix = urls[networkId] || urls[1];
 
   switch (type) {
@@ -27,4 +28,8 @@ export default function getEtherscanLink(networkId, data, type) {
       return `${prefix}/address/${data}`;
     }
   }
+}
+
+export function getProfileLink(address) {
+  return `https://app.union.finance/profile/opt:${address}`;
 }
