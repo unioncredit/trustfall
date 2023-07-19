@@ -4,18 +4,19 @@ import { formatUnits } from "ethers/lib/utils";
 import format from "utils/format";
 
 import "./MyStats.scss";
-import { calculatePosition, getTeam } from "utils/teams";
+import { getTeam } from "utils/teams";
 
 export default function MyStats({ data }) {
   const { account } = useEthers();
   const { players } = data;
 
+  const position = data?.players.findIndex(p => p.address === account) + 1;
   const player = players.find(p => p.address === account);
   const team = getTeam(player?.team);
 
   const stats = [
     // First row
-    { value: team ? `#${calculatePosition(team.key, data)}` : "N/A", label: `of 4` },
+    { value: data?.players ? `#${position}` : "N/A", label: `of ${data?.players.length}` },
     {
       value: format(formatUnits(player?.score || "0"), 2),
       label: "Your score",
