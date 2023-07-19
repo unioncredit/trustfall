@@ -13,6 +13,20 @@
     font-weight: 400;
   }
 
+  .indented {
+    list-style: circle;
+    margin-left: 15px;
+  }
+
+  ol {
+    margin-top: 15px;
+
+    li {
+      margin-left: 15px;
+      list-style: decimal;
+    }
+  }
+
   li,
   .label,
   td {
@@ -20,8 +34,9 @@
   }
 
   li {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-size: 14px;
+    line-height: 22px;
   }
 
   table {
